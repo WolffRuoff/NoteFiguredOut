@@ -26,24 +26,24 @@ public class Notes : MonoBehaviour
     public static AudioSource C(int octave)
     {
         if (octave == 1) sound = c1;
-        if (octave == 1) sound = c2;
-        if (octave == 1) sound = c3;
-        if (octave == 1) sound = c4;
-        if (octave == 1) sound = c5;
-        if (octave == 1) sound = c6;
-        if (octave == 1) sound = c7;
+        if (octave == 2) sound = c2;
+        if (octave == 3) sound = c3;
+        if (octave == 4) sound = c4;
+        if (octave == 5) sound = c5;
+        if (octave == 6) sound = c6;
+        if (octave == 7) sound = c7;
 
         return sound;
     }
     public static AudioSource D(int octave)
     {
         if (octave == 1) sound = c1;
-        if (octave == 1) sound = c2;
-        if (octave == 1) sound = c3;
-        if (octave == 1) sound = c4;
-        if (octave == 1) sound = c5;
-        if (octave == 1) sound = c6;
-        if (octave == 1) sound = c7;
+        if (octave == 2) sound = c2;
+        if (octave == 3) sound = c3;
+        if (octave == 4) sound = c4;
+        if (octave == 5) sound = c5;
+        if (octave == 6) sound = c6;
+        if (octave == 7) sound = c7;
 
         sound.pitch = Mathf.Pow(1.05946f, 2f);
         return sound;
@@ -51,12 +51,12 @@ public class Notes : MonoBehaviour
     public static AudioSource E(int octave)
     {
         if (octave == 1) sound = c1;
-        if (octave == 1) sound = c2;
-        if (octave == 1) sound = c3;
-        if (octave == 1) sound = c4;
-        if (octave == 1) sound = c5;
-        if (octave == 1) sound = c6;
-        if (octave == 1) sound = c7;
+        if (octave == 2) sound = c2;
+        if (octave == 3) sound = c3;
+        if (octave == 4) sound = c4;
+        if (octave == 5) sound = c5;
+        if (octave == 6) sound = c6;
+        if (octave == 7) sound = c7;
 
         sound.pitch = Mathf.Pow(1.05946f, 4f);
         return sound;
@@ -64,12 +64,12 @@ public class Notes : MonoBehaviour
     public static AudioSource F(int octave)
     {
         if (octave == 1) sound = c1;
-        if (octave == 1) sound = c2;
-        if (octave == 1) sound = c3;
-        if (octave == 1) sound = c4;
-        if (octave == 1) sound = c5;
-        if (octave == 1) sound = c6;
-        if (octave == 1) sound = c7;
+        if (octave == 2) sound = c2;
+        if (octave == 3) sound = c3;
+        if (octave == 4) sound = c4;
+        if (octave == 5) sound = c5;
+        if (octave == 6) sound = c6;
+        if (octave == 7) sound = c7;
 
         sound.pitch = Mathf.Pow(1.05946f, 5f);
         return sound;
@@ -77,12 +77,12 @@ public class Notes : MonoBehaviour
     public static AudioSource G(int octave)
     {
         if (octave == 1) sound = c1;
-        if (octave == 1) sound = c2;
-        if (octave == 1) sound = c3;
-        if (octave == 1) sound = c4;
-        if (octave == 1) sound = c5;
-        if (octave == 1) sound = c6;
-        if (octave == 1) sound = c7;
+        if (octave == 2) sound = c2;
+        if (octave == 3) sound = c3;
+        if (octave == 4) sound = c4;
+        if (octave == 5) sound = c5;
+        if (octave == 6) sound = c6;
+        if (octave == 7) sound = c7;
 
         sound.pitch = Mathf.Pow(1.05946f, 7f);
         return sound;
@@ -90,12 +90,12 @@ public class Notes : MonoBehaviour
     public static AudioSource A(int octave)
     {
         if (octave == 1) sound = c1;
-        if (octave == 1) sound = c2;
-        if (octave == 1) sound = c3;
-        if (octave == 1) sound = c4;
-        if (octave == 1) sound = c5;
-        if (octave == 1) sound = c6;
-        if (octave == 1) sound = c7;
+        if (octave == 2) sound = c2;
+        if (octave == 3) sound = c3;
+        if (octave == 4) sound = c4;
+        if (octave == 5) sound = c5;
+        if (octave == 6) sound = c6;
+        if (octave == 7) sound = c7;
 
         sound.pitch = Mathf.Pow(1.05946f, 9f);
         return sound;
@@ -103,12 +103,12 @@ public class Notes : MonoBehaviour
     public static AudioSource B(int octave)
     {
         if (octave == 1) sound = c1;
-        if (octave == 1) sound = c2;
-        if (octave == 1) sound = c3;
-        if (octave == 1) sound = c4;
-        if (octave == 1) sound = c5;
-        if (octave == 1) sound = c6;
-        if (octave == 1) sound = c7;
+        if (octave == 2) sound = c2;
+        if (octave == 3) sound = c3;
+        if (octave == 4) sound = c4;
+        if (octave == 5) sound = c5;
+        if (octave == 6) sound = c6;
+        if (octave == 7) sound = c7;
 
         sound.pitch = Mathf.Pow(1.05946f, 11f);
         return sound;

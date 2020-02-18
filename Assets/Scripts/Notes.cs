@@ -15,13 +15,12 @@ public class Notes : MonoBehaviour
     static AudioSource sound;
     void Start()
     {
-        
+        sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        sound = GetComponent<AudioSource>();
     }
     public static AudioSource C(int octave)
     {

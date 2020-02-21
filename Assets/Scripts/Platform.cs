@@ -77,17 +77,45 @@ public class Platform : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        KeyValuePair<char, int> pair;
         if (random)
         {
+            int octave = Random.Range(1, 7);
+            int randNote = Random.Range(1, 7);
 
+            if (randNote == 1)
+            {
+                note = 'c';
+            } else if (randNote == 2)
+            {
+                note = 'd';
+            } else if (randNote == 3)
+            {
+                note = 'e';
+            } else if (randNote == 4)
+            {
+                note = 'f';
+            } else if (randNote == 5)
+            {
+                note = 'g';
+            } else if (randNote == 6)
+            {
+                note = 'a';
+            } else if (randNote == 7)
+            {
+                note = 'b';
+            }
+
+            pair = new KeyValuePair<char, int>(note, octave);
         }
         else
         {
             Levels curr = Levels.getInstance();
-            KeyValuePair<char, int> ret = curr.getNextNote(level);
-            note = ret.Key;
+            pair = curr.getNextNote(level);
+            note = pair.Key;
         }
 
+        Notes.Note(pair);
         active = true;
     }
 }

@@ -23,7 +23,7 @@ public class Notes : MonoBehaviour
     {
     }
 
-    public static AudioSource Note(KeyValuePair<char, int> n)
+    public static void Note(KeyValuePair<char, int> n)
     {
         if (n.Value == 1) sound.clip = c1;
         if (n.Value == 2) sound.clip = c2;
@@ -33,48 +33,37 @@ public class Notes : MonoBehaviour
         if (n.Value == 6) sound.clip = c6;
         if (n.Value == 7) sound.clip = c7;
 
-        if(n.Key == 'c')
-        {
-            return sound;
-        }
 
-        else if(n.Key == 'd')
+        if(n.Key == 'd')
         {
             sound.pitch = Mathf.Pow(1.05946f, 2f);
-            return sound;
         }
 
         else if(n.Key == 'e')
         {
             sound.pitch = Mathf.Pow(1.05946f, 4f);
-            return sound;
         }
 
         else if(n.Key == 'f')
         {
             sound.pitch = Mathf.Pow(1.05946f, 5f);
-            return sound;
         }
 
         else if(n.Key == 'g')
         {
             sound.pitch = Mathf.Pow(1.05946f, 7f);
-            return sound;
         }
 
         else if(n.Key == 'a')
         {
             sound.pitch = Mathf.Pow(1.05946f, 9f);
-            return sound;
         }
 
         else if(n.Key == 'b')
         {
             sound.pitch = Mathf.Pow(1.05946f, 11f);
-            return sound;
         }
-        else
-            return sound;
+        sound.Play();
     }
     public static AudioSource C(int octave)
     {

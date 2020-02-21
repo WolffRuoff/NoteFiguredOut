@@ -25,13 +25,13 @@ public class Notes : MonoBehaviour
 
     public static void Note(KeyValuePair<char, int> n)
     {
-        if (n.Value == 1) sound.clip = c1;
+        /*if (n.Value == 1) sound.clip = c1;
         if (n.Value == 2) sound.clip = c2;
         if (n.Value == 3) sound.clip = c3;
         if (n.Value == 4) sound.clip = c4;
         if (n.Value == 5) sound.clip = c5;
         if (n.Value == 6) sound.clip = c6;
-        if (n.Value == 7) sound.clip = c7;
+        if (n.Value == 7) sound.clip = c7;*/
 
 
         if(n.Key == 'd')

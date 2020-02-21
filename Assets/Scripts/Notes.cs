@@ -22,6 +22,60 @@ public class Notes : MonoBehaviour
     void Update()
     {
     }
+
+    public static AudioSource Note(char i, int octave)
+    {
+        if (octave == 1) sound = c1;
+        if (octave == 2) sound = c2;
+        if (octave == 3) sound = c3;
+        if (octave == 4) sound = c4;
+        if (octave == 5) sound = c5;
+        if (octave == 6) sound = c6;
+        if (octave == 7) sound = c7;
+
+        if(i == 'c')
+        {
+            return sound;
+        }
+
+        else if(i == 'd')
+        {
+            sound.pitch = Mathf.Pow(1.05946f, 2f);
+            return sound;
+        }
+
+        else if(i == 'e')
+        {
+            sound.pitch = Mathf.Pow(1.05946f, 4f);
+            return sound;
+        }
+
+        else if(i == 'f')
+        {
+            sound.pitch = Mathf.Pow(1.05946f, 5f);
+            return sound;
+        }
+
+        else if(i == 'g')
+        {
+            sound.pitch = Mathf.Pow(1.05946f, 7f);
+            return sound;
+        }
+
+        else if(i == 'a')
+        {
+            sound.pitch = Mathf.Pow(1.05946f, 9f);
+            return sound;
+        }
+
+        else if(i == 'b')
+        {
+            sound.pitch = Mathf.Pow(1.05946f, 11f);
+            return sound;
+        }
+        else
+            return sound;
+    }
     public static AudioSource C(int octave)
     {
         if (octave == 1) sound = c1;

@@ -13,7 +13,9 @@ public class Levels : MonoBehaviour
 
     void Start()
     {
-        
+        Queue<KeyValuePair<char, int>> level0 = new Queue<KeyValuePair<char, int>>();
+        level0.Enqueue(new KeyValuePair<char, int>('a', 1));
+        songs.Add(0, level0);
     }
     
 

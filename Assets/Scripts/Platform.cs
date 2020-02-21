@@ -10,28 +10,6 @@ public class Platform : MonoBehaviour
     public float timer = 2f;
 
     private char note;
-    private AudioSource audiosource;
-    private AudioClip sound;
-
-    void Start()
-    {
-        audiosource = GetComponent<AudioSource>();
-
-        if (random)
-        {
-
-        }
-        else
-        {
-            Levels curr = Levels.getInstance();
-            KeyValuePair<char, int> ret = curr.getNextNote(level);
-            note = ret.Key;
-            //note = Notes.Note(ret);
-        }
-
-        audiosource.clip = sound;
-
-    }
 
     void Update()
     {
@@ -95,5 +73,21 @@ public class Platform : MonoBehaviour
                 }
             }
         }  
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (random)
+        {
+
+        }
+        else
+        {
+            Levels curr = Levels.getInstance();
+            KeyValuePair<char, int> ret = curr.getNextNote(level);
+            note = ret.Key;
+        }
+
+        active = true;
     }
 }

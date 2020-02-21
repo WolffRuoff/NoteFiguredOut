@@ -4,74 +4,96 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    public GameObject platform;
-    public AudioSource note;
-    public Sprite platformSprite;
-    private System.Random rand = new System.Random();
+    public bool active = false;
+    public bool random = false;
+    public int level = 0;
+    public float timer = 2f;
 
+    private char note;
+    private AudioSource audiosource;
+    private AudioClip sound;
 
-
-    private AudioSource randomNote()
-    {
-        int letter = rand.Next(7);
-        int octave = rand.Next(7) + 1;
-
-        AudioSource randNote = GetComponent<AudioSource>();
-
-        if (letter == 0)
-        {
-            randNote = Notes.A(octave);
-        }
-
-        if (letter == 1)
-        {
-            randNote = Notes.B(octave);
-        }
-
-        if (letter == 2)
-        {
-            randNote = Notes.C(octave);
-        }
-
-        if (letter == 3)
-        {
-            randNote = Notes.D(octave);
-        }
-
-        if (letter == 4)
-        {
-            randNote = Notes.E(octave);
-        }
-
-        if (letter == 5)
-        {
-            randNote = Notes.F(octave);
-        }
-
-        if (letter == 6)
-        {
-            randNote = Notes.G(octave);
-        }
-
-        return randNote;
-    }
-
-
-
-
-    // Start is called before the first frame update
     void Start()
     {
-        //Instantiate a platform that plays a note
-        platform = GameObject.FindGameObjectWithTag("platform");
+        audiosource = GetComponent<AudioSource>();
 
-        randomNote().Play();
+        if (random)
+        {
+
+        }
+        else
+        {
+            Levels curr = Levels.getInstance();
+            KeyValuePair<char, int> ret = curr.getNextNote(level);
+            note = ret.Key;
+            //note = Notes.Note(ret);
+        }
+
+        audiosource.clip = sound;
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        randomNote().Play(); //Every time a new platform is made
+        if (active)
+        {
+            timer -= Time.deltaTime;
+            if (timer < 0f)
+            {
+                // player loses
+            }
+
+            // check for user input and if it matches
+            // still need to do something for button on screen
+            if (note == 'c')
+            {
+                if (Input.GetKeyDown(KeyCode.C))
+                {
+                    // make player move to next platform
+                }
+            }
+            else if (note == 'd')
+            {
+                if (Input.GetKeyDown(KeyCode.D))
+                {
+                    // make player move to next platform
+                }
+            }
+            else if (note == 'e')
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    // make player move to next platform
+                }
+            }
+            else if (note == 'f')
+            {
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    // make player move to next platform
+                }
+            }
+            else if (note == 'g')
+            {
+                if (Input.GetKeyDown(KeyCode.G))
+                {
+                    // make player move to next platform
+                }
+            }
+            else if (note == 'a')
+            {
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    // make player move to next platform
+                }
+            }
+            else if (note == 'b')
+            {
+                if (Input.GetKeyDown(KeyCode.B))
+                {
+                    // make player move to next platform
+                }
+            }
+        }  
     }
 }

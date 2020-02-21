@@ -23,52 +23,52 @@ public class Notes : MonoBehaviour
     {
     }
 
-    public static AudioSource Note(char i, int octave)
+    public static AudioSource Note(KeyValuePair<char, int> n)
     {
-        if (octave == 1) sound = c1;
-        if (octave == 2) sound = c2;
-        if (octave == 3) sound = c3;
-        if (octave == 4) sound = c4;
-        if (octave == 5) sound = c5;
-        if (octave == 6) sound = c6;
-        if (octave == 7) sound = c7;
+        if (n.Value == 1) sound = c1;
+        if (n.Value == 2) sound = c2;
+        if (n.Value == 3) sound = c3;
+        if (n.Value == 4) sound = c4;
+        if (n.Value == 5) sound = c5;
+        if (n.Value == 6) sound = c6;
+        if (n.Value == 7) sound = c7;
 
-        if(i == 'c')
+        if(n.Key == 'c')
         {
             return sound;
         }
 
-        else if(i == 'd')
+        else if(n.Key == 'd')
         {
             sound.pitch = Mathf.Pow(1.05946f, 2f);
             return sound;
         }
 
-        else if(i == 'e')
+        else if(n.Key == 'e')
         {
             sound.pitch = Mathf.Pow(1.05946f, 4f);
             return sound;
         }
 
-        else if(i == 'f')
+        else if(n.Key == 'f')
         {
             sound.pitch = Mathf.Pow(1.05946f, 5f);
             return sound;
         }
 
-        else if(i == 'g')
+        else if(n.Key == 'g')
         {
             sound.pitch = Mathf.Pow(1.05946f, 7f);
             return sound;
         }
 
-        else if(i == 'a')
+        else if(n.Key == 'a')
         {
             sound.pitch = Mathf.Pow(1.05946f, 9f);
             return sound;
         }
 
-        else if(i == 'b')
+        else if(n.Key == 'b')
         {
             sound.pitch = Mathf.Pow(1.05946f, 11f);
             return sound;

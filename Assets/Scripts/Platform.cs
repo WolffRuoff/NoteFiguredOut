@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Platform : MonoBehaviour
 {
@@ -50,6 +51,9 @@ public class Platform : MonoBehaviour
                 else
                 {
                     // wrong answer -- player loses
+                    // maybe add a fade to black?
+                    // not sure if we wanna restart current level or return to main menu
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 }
             }
             else

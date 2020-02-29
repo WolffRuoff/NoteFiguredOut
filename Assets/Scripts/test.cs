@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class test : MonoBehaviour
 {
@@ -22,9 +23,16 @@ public class test : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer < 0)
             {
-                timer = .2f;
-                Notes.Note(level.getNextNote(0));
+                timer = 1f;
+                var n = level.getNextNote(0);
+                Debug.Log(n.Key);
+                Notes.Note(n);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         
     }

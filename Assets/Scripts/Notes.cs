@@ -33,7 +33,7 @@ public class Notes : MonoBehaviour
         _instance = this;
     }
 
-    private AudioSource sound;
+    AudioSource sound;
     void Start()
     {
         sound = new AudioSource();
@@ -41,13 +41,13 @@ public class Notes : MonoBehaviour
 
     public void Note(KeyValuePair<char, int> n)
     {
-        /*if (n.Value == 1) sound.clip = c1;
+        if (n.Value == 1) sound.clip = c1;
         if (n.Value == 2) sound.clip = c2;
         if (n.Value == 3) sound.clip = c3;
         if (n.Value == 4) sound.clip = c4;
         if (n.Value == 5) sound.clip = c5;
         if (n.Value == 6) sound.clip = c6;
-        if (n.Value == 7) sound.clip = c7;*/
+        if (n.Value == 7) sound.clip = c7;
 
 
         if(n.Key == 'd')
@@ -80,7 +80,7 @@ public class Notes : MonoBehaviour
             sound.pitch = Mathf.Pow(1.05946f, 11f);
         }
         sound.Play();
-    }
+    }/*
     public AudioSource C(int octave)
     {
         if (octave == 1) sound.clip = c1;
@@ -170,5 +170,5 @@ public class Notes : MonoBehaviour
 
         sound.pitch = Mathf.Pow(1.05946f, 11f);
         return sound;
-    }
+    } */
 }

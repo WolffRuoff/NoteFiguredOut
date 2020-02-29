@@ -145,7 +145,7 @@ public class Platform : MonoBehaviour
         {
             Levels curr = Levels.getInstance();
             pair = curr.getNextNote(level);
-            note = pair.Key;
+            char note = pair.Key;
         }
 
         Notes.Instance.Note(pair);

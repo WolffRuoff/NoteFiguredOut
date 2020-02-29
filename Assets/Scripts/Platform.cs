@@ -10,6 +10,7 @@ public class Platform : MonoBehaviour
 
     private bool active = false;
     private KeyValuePair<char, int> pair;
+    private int selection = -1;
 
     void Update()
     {
@@ -18,58 +19,68 @@ public class Platform : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer < 0f)
             {
-                // player loses
+                if (selection == 0 && pair.Key == 'c')
+                {
+                    // make player move to next platform
+                }
+                else if (selection == 1 && pair.Key == 'd')
+                {
+                    // make player move to next platform
+                }
+                else if (selection == 2 && pair.Key == 'e')
+                {
+                    // make player move to next platform
+                }
+                else if (selection == 3 && pair.Key == 'f')
+                {
+                    // make player move to next platform
+                }
+                else if (selection == 4 && pair.Key == 'g')
+                {
+                    // make player move to next platform
+                }
+                else if (selection == 5 && pair.Key == 'a')
+                {
+                    // make player move to next platform
+                }
+                else if (selection == 6 && pair.Key == 'b')
+                {
+                    // make player move to next platform
+                }
+                else
+                {
+                    // wrong answer -- player loses
+                }
             }
-
-            // check for user input and if it matches
-            // still need to do something for button on screen
-            if (pair.Key == 'c')
+            else
             {
                 if (Input.GetKeyDown(KeyCode.C))
                 {
-                    // make player move to next platform
+                    selection = 0;
                 }
-            }
-            else if (pair.Key == 'd')
-            {
-                if (Input.GetKeyDown(KeyCode.D))
+                else if (Input.GetKeyDown(KeyCode.D))
                 {
-                    // make player move to next platform
+                    selection = 1;
                 }
-            }
-            else if (pair.Key == 'e')
-            {
-                if (Input.GetKeyDown(KeyCode.E))
+                else if (Input.GetKeyDown(KeyCode.E))
                 {
-                    // make player move to next platform
+                    selection = 2;
                 }
-            }
-            else if (pair.Key == 'f')
-            {
-                if (Input.GetKeyDown(KeyCode.F))
+                else if (Input.GetKeyDown(KeyCode.F))
                 {
-                    // make player move to next platform
+                    selection = 3;
                 }
-            }
-            else if (pair.Key == 'g')
-            {
-                if (Input.GetKeyDown(KeyCode.G))
+                else if (Input.GetKeyDown(KeyCode.G))
                 {
-                    // make player move to next platform
+                    selection = 4;
                 }
-            }
-            else if (pair.Key == 'a')
-            {
-                if (Input.GetKeyDown(KeyCode.A))
+                else if (Input.GetKeyDown(KeyCode.A))
                 {
-                    // make player move to next platform
+                    selection = 5;
                 }
-            }
-            else if (pair.Key == 'b')
-            {
-                if (Input.GetKeyDown(KeyCode.B))
+                else if (Input.GetKeyDown(KeyCode.B))
                 {
-                    // make player move to next platform
+                    selection = 6;
                 }
             }
         }  

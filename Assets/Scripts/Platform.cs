@@ -115,7 +115,7 @@ public class Platform : MonoBehaviour
             note = pair.Key;
         }
 
-        Notes.Note(pair);
+        Notes.Instance.Note(pair);
         active = true;
     }
 }

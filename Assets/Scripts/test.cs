@@ -23,7 +23,7 @@ public class test : MonoBehaviour
             if (timer < 0)
             {
                 timer = .2f;
-                Notes.Note(level.getNextNote(0));
+                Notes.Instance.Note(level.getNextNote(0));
             }
         }
         

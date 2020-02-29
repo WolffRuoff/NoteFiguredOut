@@ -4,26 +4,42 @@ using UnityEngine;
 
 public class Notes : MonoBehaviour
 {
-    public static AudioClip c1;
-    public static AudioClip c2;
-    public static AudioClip c3;
-    public static AudioClip c4;
-    public static AudioClip c5;
-    public static AudioClip c6;
-    public static AudioClip c7;
 
-    static AudioSource sound;
+    public AudioClip c1;
+    public AudioClip c2;
+    public AudioClip c3;
+    public AudioClip c4;
+    public AudioClip c5;
+    public AudioClip c6;
+    public AudioClip c7;
+
+    private static Notes _instance;
+
+    public static Notes Instance
+    {
+        get
+        {
+            if(_instance == null)
+            {
+                GameObject note = new GameObject("Notes");
+                note.AddComponent<Notes>();
+            }
+            return _instance;
+        }
+    }
+
+    void Awake()
+    {
+        _instance = this;
+    }
+
+    private AudioSource sound;
     void Start()
     {
-        sound = GetComponent<AudioSource>();
+        sound = new AudioSource();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
-    public static void Note(KeyValuePair<char, int> n)
+    public void Note(KeyValuePair<char, int> n)
     {
         /*if (n.Value == 1) sound.clip = c1;
         if (n.Value == 2) sound.clip = c2;
@@ -65,7 +81,7 @@ public class Notes : MonoBehaviour
         }
         sound.Play();
     }
-    public static AudioSource C(int octave)
+    public AudioSource C(int octave)
     {
         if (octave == 1) sound.clip = c1;
         if (octave == 2) sound.clip = c2;
@@ -77,7 +93,7 @@ public class Notes : MonoBehaviour
 
         return sound;
     }
-    public static AudioSource D(int octave)
+    public AudioSource D(int octave)
     {
         if (octave == 1) sound.clip = c1;
         if (octave == 2) sound.clip = c2;
@@ -90,7 +106,7 @@ public class Notes : MonoBehaviour
         sound.pitch = Mathf.Pow(1.05946f, 2f);
         return sound;
     }
-    public static AudioSource E(int octave)
+    public AudioSource E(int octave)
     {
         if (octave == 1) sound.clip = c1;
         if (octave == 2) sound.clip = c2;
@@ -103,7 +119,7 @@ public class Notes : MonoBehaviour
         sound.pitch = Mathf.Pow(1.05946f, 4f);
         return sound;
     }
-    public static AudioSource F(int octave)
+    public AudioSource F(int octave)
     {
         if (octave == 1) sound.clip = c1;
         if (octave == 2) sound.clip = c2;
@@ -116,7 +132,7 @@ public class Notes : MonoBehaviour
         sound.pitch = Mathf.Pow(1.05946f, 5f);
         return sound;
     }
-    public static AudioSource G(int octave)
+    public AudioSource G(int octave)
     {
         if (octave == 1) sound.clip = c1;
         if (octave == 2) sound.clip = c2;
@@ -129,7 +145,7 @@ public class Notes : MonoBehaviour
         sound.pitch = Mathf.Pow(1.05946f, 7f);
         return sound;
     }
-    public static AudioSource A(int octave)
+    public AudioSource A(int octave)
     {
         if (octave == 1) sound.clip = c1;
         if (octave == 2) sound.clip = c2;
@@ -142,7 +158,7 @@ public class Notes : MonoBehaviour
         sound.pitch = Mathf.Pow(1.05946f, 9f);
         return sound;
     }
-    public static AudioSource B(int octave)
+    public AudioSource B(int octave)
     {
         if (octave == 1) sound.clip = c1;
         if (octave == 2) sound.clip = c2;

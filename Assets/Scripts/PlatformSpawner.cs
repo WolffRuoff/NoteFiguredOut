@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlatformSpawner : MonoBehaviour
 {
     public Transform player;
-    public GameObject platform;
+    public GameObject platformL;
+    public GameObject platformM;
+    public GameObject platformR;
     public int spaceBetweenPlatforms = 25;
     public int startingXValue = 0;
     public int offset = 10;
@@ -26,9 +28,14 @@ public class PlatformSpawner : MonoBehaviour
             prevX = (int)player.position.x;
 
             // create new platform
-            Vector3 newPosition = prevPlatform.transform.position;
-            newPosition.x += offset;
-            prevPlatform = Instantiate(platform, newPosition, Quaternion.identity);
+            for (int i = 0; i < 7; i++)
+            {
+                Vector3 newPosition = prevPlatform.transform.position;
+                newPosition.x += offset;
+                if (i == 0 || i == 3) { prevPlatform = Instantiate(platformL, newPosition, Quaternion.identity); }
+                if (i == 1 || i == 4 || i == 5) { prevPlatform = Instantiate(platformM, newPosition, Quaternion.identity); }
+                if (i == 2 || i == 6) { prevPlatform = Instantiate(platformR, newPosition, Quaternion.identity); }
+            }
         }
     }
 

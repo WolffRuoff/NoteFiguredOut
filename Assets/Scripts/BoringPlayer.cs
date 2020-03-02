@@ -20,12 +20,12 @@ public class BoringPlayer : MonoBehaviour
         Vector2 vel = new Vector2(0, 0);
         if (Input.GetKey(KeyCode.A))
         {
-            vel.x = 1 * speed;
+            vel.x = -1 * speed;
         }
         
         if (Input.GetKey(KeyCode.D))
         {
-            vel.x = -1 * speed;
+            vel.x = 1 * speed;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))

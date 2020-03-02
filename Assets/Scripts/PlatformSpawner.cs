@@ -7,17 +7,17 @@ public class PlatformSpawner : MonoBehaviour
     public Transform player;
     public GameObject platformL;
     public GameObject platformM;
-    public GameObject platformR;
-    public int spaceBetweenPlatforms = 25;
-    public int startingXValue = 0;
-    public int offset = 10;
+    public GameObject platformR; 
+    public int spaceBetweenPlatforms = 10;
+    public int startingXValue = -8;
+    public float offset = 1.5f;
 
     private GameObject prevPlatform;
     private int prevX;
 
     void Start()
     {
-        prevPlatform = platform;
+        prevPlatform = platformR;
         prevX = startingXValue;
     }
 

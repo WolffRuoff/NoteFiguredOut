@@ -34,48 +34,49 @@ public class Notes : MonoBehaviour
     }
 
     AudioSource sound;
+
     void Start()
     {
-        sound = new AudioSource();
+        sound = GetComponent<AudioSource>();
     }
 
-    public void Note(KeyValuePair<char, int> n)
+    public void Note(char note, int octive)
     {
-        if (n.Value == 1) sound.clip = c1;
-        if (n.Value == 2) sound.clip = c2;
-        if (n.Value == 3) sound.clip = c3;
-        if (n.Value == 4) sound.clip = c4;
-        if (n.Value == 5) sound.clip = c5;
-        if (n.Value == 6) sound.clip = c6;
-        if (n.Value == 7) sound.clip = c7;
+        if (octive == 1) { sound.clip = c1; }
+        if (octive == 2) { sound.clip = c2; }
+        if (octive == 3) { sound.clip = c3; }
+        if (octive == 4) { sound.clip = c4; }
+        if (octive == 5) { sound.clip = c5; }
+        if (octive == 6) { sound.clip = c6; }
+        if (octive == 7) { sound.clip = c7; }
 
 
-        if(n.Key == 'd')
+        if(note == 'd')
         {
             sound.pitch = Mathf.Pow(1.05946f, 2f);
         }
 
-        else if(n.Key == 'e')
+        else if(note == 'e')
         {
             sound.pitch = Mathf.Pow(1.05946f, 4f);
         }
 
-        else if(n.Key == 'f')
+        else if(note == 'f')
         {
             sound.pitch = Mathf.Pow(1.05946f, 5f);
         }
 
-        else if(n.Key == 'g')
+        else if(note == 'g')
         {
             sound.pitch = Mathf.Pow(1.05946f, 7f);
         }
 
-        else if(n.Key == 'a')
+        else if(note == 'a')
         {
             sound.pitch = Mathf.Pow(1.05946f, 9f);
         }
 
-        else if(n.Key == 'b')
+        else if(note == 'b')
         {
             sound.pitch = Mathf.Pow(1.05946f, 11f);
         }

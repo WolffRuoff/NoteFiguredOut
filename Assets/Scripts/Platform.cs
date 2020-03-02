@@ -9,12 +9,16 @@ public class Platform : MonoBehaviour
     public int level = 0;
     public float timer = 2f;
 
+    public GameObject player;
+    public float jumpHeight;
+
     private bool active = false;
     private KeyValuePair<char, int> pair;
     private int selection = -1;
 
     void Update()
     {
+        Vector3 vel = player.GetComponent<Rigidbody2D>().velocity;
         if (active)
         {
             timer -= Time.deltaTime;
@@ -22,31 +26,31 @@ public class Platform : MonoBehaviour
             {
                 if (selection == 0 && pair.Key == 'c')
                 {
-                    // make player move to next platform
+                    vel.y = jumpHeight;
                 }
                 else if (selection == 1 && pair.Key == 'd')
                 {
-                    // make player move to next platform
+                    vel.y = jumpHeight;
                 }
                 else if (selection == 2 && pair.Key == 'e')
                 {
-                    // make player move to next platform
+                    vel.y = jumpHeight;
                 }
                 else if (selection == 3 && pair.Key == 'f')
                 {
-                    // make player move to next platform
+                    vel.y = jumpHeight;
                 }
                 else if (selection == 4 && pair.Key == 'g')
                 {
-                    // make player move to next platform
+                    vel.y = jumpHeight;
                 }
                 else if (selection == 5 && pair.Key == 'a')
                 {
-                    // make player move to next platform
+                    vel.y = jumpHeight;
                 }
                 else if (selection == 6 && pair.Key == 'b')
                 {
-                    // make player move to next platform
+                    vel.y = jumpHeight;
                 }
                 else
                 {
@@ -138,7 +142,7 @@ public class Platform : MonoBehaviour
                 pair = curr.getNextNote(level);
             }
 
-            Notes.Instance.Note(pair);
+            Notes.Instance.Note(pair.Key, pair.Value);
             active = true;
         }
         else
@@ -148,7 +152,7 @@ public class Platform : MonoBehaviour
             char note = pair.Key;
         }
 
-        Notes.Instance.Note(pair);
+        Notes.Instance.Note(pair.Key, pair.Value);
         active = true;
     }
 }

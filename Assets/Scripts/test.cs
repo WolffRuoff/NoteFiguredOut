@@ -26,7 +26,8 @@ public class test : MonoBehaviour
                 timer = 1f;
                 var n = level.getNextNote(0);
                 Debug.Log(n.Key);
-                Notes.Instance.Note(n);
+                Debug.Log(n.Value);
+                Notes.Instance.Note(n.Key, n.Value);
             }
         }
 

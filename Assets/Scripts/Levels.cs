@@ -5,7 +5,7 @@ using UnityEngine;
 public class Levels : MonoBehaviour
 {
 
-    private static Levels first = null;
+    private static Levels first;
 
     private Levels() { }
 
@@ -13,7 +13,7 @@ public class Levels : MonoBehaviour
 
     void Start()
     {
-        
+        first = null;
     }
 
     public static ref Levels getInstance()

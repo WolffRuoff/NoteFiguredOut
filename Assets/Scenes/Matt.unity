@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1782981228}
-  offsetX: -2
+  offsetX: 2
 --- !u!1 &188290153
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a87519dad2c0a83458abac1bf1f0f805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   jump: 2
 --- !u!50 &1782981225
 Rigidbody2D:

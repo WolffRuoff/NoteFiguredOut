@@ -5,13 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuClick : MonoBehaviour
 {
-    public int level;
-    TextMesh tm;
-
     // Start is called before the first frame update
     void Start()
     {
-        tm = GetComponent<TextMesh>();
     }
 
     // Update is called once per frame
@@ -19,23 +15,8 @@ public class MenuClick : MonoBehaviour
     {
         
     }
-
-    private void OnMouseEnter()
-    {
-        tm.color =Color.red;
-    }
-
-    private void OnMouseDown()
-    {
-        SceneManager.LoadScene("Level" + level);
-    }
-    private void OnMouseUp()
+    public void LoadLevel(int level)
     {
         SceneManager.LoadScene("Level"+level);
-    }
-
-    private void OnMouseExit()
-    {
-        tm.color = Color.white;
     }
 }

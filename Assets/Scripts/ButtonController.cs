@@ -6,6 +6,6 @@ public class ButtonController : MonoBehaviour
 {
     public void Send (int note)
     {
-        GameController.recieveInput(note);
+        GameController.RecieveInput(note);
     }
 }

@@ -1,13 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Platform : MonoBehaviour
 {
     public bool random = false;
     public int level = 0;
     public float timer = 2f;
+    public Button c;
+    public Button d;
+    public Button e;
+    public Button f;
+    public Button g;
+    public Button a;
+    public Button b;
 
     public GameObject player;
     public float jumpHeight;
@@ -21,31 +28,38 @@ public class Platform : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.C))
             {
-                GameController.recieveInput(0);
+                GameController.RecieveInput(0);
+                c.Select();
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
-                GameController.recieveInput(1);
+                GameController.RecieveInput(1);
+                d.Select();
             }
             else if (Input.GetKeyDown(KeyCode.E))
             {
-                GameController.recieveInput(2);
+                GameController.RecieveInput(2);
+                e.Select();
             }
             else if (Input.GetKeyDown(KeyCode.F))
             {
-                GameController.recieveInput(3);
+                GameController.RecieveInput(3);
+                f.Select();
             }
             else if (Input.GetKeyDown(KeyCode.G))
             {
-                GameController.recieveInput(4);
+                GameController.RecieveInput(4);
+                g.Select();
             }
             else if (Input.GetKeyDown(KeyCode.A))
             {
-                GameController.recieveInput(5);
+                GameController.RecieveInput(5);
+                a.Select();
             }
             else if (Input.GetKeyDown(KeyCode.B))
             {
-                GameController.recieveInput(6);
+                GameController.RecieveInput(6);
+                b.Select();
             }
         } 
     }
@@ -100,45 +114,36 @@ public class Platform : MonoBehaviour
 
             Notes.Instance.Note(pair.Key, pair.Value);
             active = true;
-        }
-        else
-        {
-            Levels curr = Levels.getInstance();
-            pair = curr.getNextNote(level);
-        }
 
-        if (pair.Key == 'c')
-        {
-            GameController.recieveNote(0);
+            if (pair.Key == 'c')
+            {
+                GameController.RecieveNote(0);
+            }
+            else if (pair.Key == 'd')
+            {
+                GameController.RecieveNote(1);
+            }
+            else if (pair.Key == 'e')
+            {
+                GameController.RecieveNote(2);
+            }
+            else if (pair.Key == 'f')
+            {
+                GameController.RecieveNote(3);
+            }
+            else if (pair.Key == 'g')
+            {
+                GameController.RecieveNote(4);
+            }
+            else if (pair.Key == 'a')
+            {
+                GameController.RecieveNote(5);
+            }
+            else if (pair.Key == 'b')
+            {
+                GameController.RecieveNote(6);
+            }
         }
-        else if (pair.Key == 'd')
-        {
-            GameController.recieveNote(1);
-        }
-        else if (pair.Key == 'e')
-        {
-            GameController.recieveNote(2);
-        }
-        else if (pair.Key == 'f')
-        {
-            GameController.recieveNote(3);
-        }
-        else if (pair.Key == 'g')
-        {
-            GameController.recieveNote(4);
-        }
-        else if (pair.Key == 'a')
-        {
-            GameController.recieveNote(5);
-        }
-        else if (pair.Key == 'b')
-        {
-            GameController.recieveNote(6);
-        }
-
-        Notes.Instance.Note(pair.Key, pair.Value);
-        active = true;
     }
-
 }
 

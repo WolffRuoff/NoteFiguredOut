@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
     public GameObject player;
-    public float jumpHeight;
+    public float yValueIncrease;
+    public float xValueIncrease;
+    public Button[] buttons;
 
     public float timer = 2f;
 
@@ -28,7 +31,16 @@ public class GameController : MonoBehaviour
         {
             if (selection == note && note != -1)
             {
-                vel.y = jumpHeight;
+                // correct answer
+                // reset buttons to unselected
+                foreach (Button b in buttons)
+                {
+                    b.image.color = Color.white;
+                }
+
+                // move player to next platform (causes onCollisionEnter2D in Platform.cs)
+                vel.x = xValueIncrease;
+                vel.y = yValueIncrease;
             }
             else
             {
@@ -40,12 +52,12 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public static void recieveInput(int n)
+    public static void RecieveInput(int n)
     {
         selection = n;
     }
 
-    public static void recieveNote(int n)
+    public static void RecieveNote(int n)
     {
         note = n;
     }

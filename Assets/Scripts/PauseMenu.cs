@@ -15,7 +15,7 @@ using UnityEngine;
 /// </summary>
 public class PauseMenu : MonoBehaviour {
 
-	public string mainMenuScene = "MainMenu";
+	public string mainMenuScene = "StartMenu";
 	public string pauseMenuScene = "PauseMenu";
     public GameObject pauseMenuCanvas;
 
@@ -50,4 +50,6 @@ public class PauseMenu : MonoBehaviour {
 		GameManager.gameState = GameManager.GameState.StartMenu;
 		GameManager.LoadScene (mainMenuScene);
 	}
+
+
 }

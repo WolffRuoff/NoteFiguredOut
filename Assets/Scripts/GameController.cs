@@ -10,8 +10,8 @@ public class GameController : MonoBehaviour
 
     public float timer = 2f;
 
-    private char note;
-    private int selection = -1;
+    private static int note = -1;
+    private static int selection = -1;
 
     // Start is called before the first frame update
     void Start()
@@ -26,31 +26,7 @@ public class GameController : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer < 0f)
         {
-            if (selection == 0 && note == 'c')
-            {
-                vel.y = jumpHeight;
-            }
-            else if (selection == 1 && note == 'd')
-            {
-                vel.y = jumpHeight;
-            }
-            else if (selection == 2 && note == 'e')
-            {
-                vel.y = jumpHeight;
-            }
-            else if (selection == 3 && note == 'f')
-            {
-                vel.y = jumpHeight;
-            }
-            else if (selection == 4 && note == 'g')
-            {
-                vel.y = jumpHeight;
-            }
-            else if (selection == 5 && note == 'a')
-            {
-                vel.y = jumpHeight;
-            }
-            else if (selection == 6 && note == 'b')
+            if (selection == note && note != -1)
             {
                 vel.y = jumpHeight;
             }
@@ -64,8 +40,13 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void recieveInput(int n)
+    public static void recieveInput(int n)
     {
         selection = n;
+    }
+
+    public static void recieveNote(int n)
+    {
+        note = n;
     }
 }

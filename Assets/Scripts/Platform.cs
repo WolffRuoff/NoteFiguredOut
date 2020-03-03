@@ -14,84 +14,40 @@ public class Platform : MonoBehaviour
 
     private bool active = false;
     private KeyValuePair<char, int> pair;
-    private int selection = -1;
 
     void Update()
     {
-        Vector3 vel = player.GetComponent<Rigidbody2D>().velocity;
         if (active)
         {
-            timer -= Time.deltaTime;
-            if (timer < 0f)
+            if (Input.GetKeyDown(KeyCode.C))
             {
-                if (selection == 0 && pair.Key == 'c')
-                {
-                    vel.y = jumpHeight;
-                }
-                else if (selection == 1 && pair.Key == 'd')
-                {
-                    vel.y = jumpHeight;
-                }
-                else if (selection == 2 && pair.Key == 'e')
-                {
-                    vel.y = jumpHeight;
-                }
-                else if (selection == 3 && pair.Key == 'f')
-                {
-                    vel.y = jumpHeight;
-                }
-                else if (selection == 4 && pair.Key == 'g')
-                {
-                    vel.y = jumpHeight;
-                }
-                else if (selection == 5 && pair.Key == 'a')
-                {
-                    vel.y = jumpHeight;
-                }
-                else if (selection == 6 && pair.Key == 'b')
-                {
-                    vel.y = jumpHeight;
-                }
-                else
-                {
-                    // wrong answer -- player loses
-                    // maybe add a fade to black?
-                    // not sure if we wanna restart current level or return to main menu
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                }
+                GameController.recieveInput(0);
             }
-            else
+            else if (Input.GetKeyDown(KeyCode.D))
             {
-                if (Input.GetKeyDown(KeyCode.C))
-                {
-                    selection = 0;
-                }
-                else if (Input.GetKeyDown(KeyCode.D))
-                {
-                    selection = 1;
-                }
-                else if (Input.GetKeyDown(KeyCode.E))
-                {
-                    selection = 2;
-                }
-                else if (Input.GetKeyDown(KeyCode.F))
-                {
-                    selection = 3;
-                }
-                else if (Input.GetKeyDown(KeyCode.G))
-                {
-                    selection = 4;
-                }
-                else if (Input.GetKeyDown(KeyCode.A))
-                {
-                    selection = 5;
-                }
-                else if (Input.GetKeyDown(KeyCode.B))
-                {
-                    selection = 6;
-                }
+                GameController.recieveInput(1);
             }
-        }  
+            else if (Input.GetKeyDown(KeyCode.E))
+            {
+                GameController.recieveInput(2);
+            }
+            else if (Input.GetKeyDown(KeyCode.F))
+            {
+                GameController.recieveInput(3);
+            }
+            else if (Input.GetKeyDown(KeyCode.G))
+            {
+                GameController.recieveInput(4);
+            }
+            else if (Input.GetKeyDown(KeyCode.A))
+            {
+                GameController.recieveInput(5);
+            }
+            else if (Input.GetKeyDown(KeyCode.B))
+            {
+                GameController.recieveInput(6);
+            }
+        } 
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -149,10 +105,40 @@ public class Platform : MonoBehaviour
         {
             Levels curr = Levels.getInstance();
             pair = curr.getNextNote(level);
-            char note = pair.Key;
+        }
+
+        if (pair.Key == 'c')
+        {
+            GameController.recieveNote(0);
+        }
+        else if (pair.Key == 'd')
+        {
+            GameController.recieveNote(1);
+        }
+        else if (pair.Key == 'e')
+        {
+            GameController.recieveNote(2);
+        }
+        else if (pair.Key == 'f')
+        {
+            GameController.recieveNote(3);
+        }
+        else if (pair.Key == 'g')
+        {
+            GameController.recieveNote(4);
+        }
+        else if (pair.Key == 'a')
+        {
+            GameController.recieveNote(5);
+        }
+        else if (pair.Key == 'b')
+        {
+            GameController.recieveNote(6);
         }
 
         Notes.Instance.Note(pair.Key, pair.Value);
         active = true;
     }
+
 }
+

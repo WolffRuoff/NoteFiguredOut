@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     public Button[] buttons;
     public float timerVal = 2f;
 
+
     private static int note = -1;
     private static int selection = -1;
     private float timer;

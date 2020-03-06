@@ -686,9 +686,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ecade54ea8744b63971f04272d161e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2987590501276307734}
-  offsetX: 0
-  offsetY: 0
 --- !u!1 &2987590500846956289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1057,7 @@ GameObject:
   - component: {fileID: 2987590501276307734}
   - component: {fileID: 2987590501276307735}
   m_Layer: 5
-  m_Name: ButtonController
+  m_Name: InputController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1094,9 +1091,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2987590501276307733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 745efd6d7f647423ba93acc4f69c64ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f6f65ce1c2ca482e990427c1fafa9e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  c: {fileID: 2987590501579309152}
+  d: {fileID: 2987590501665414297}
+  e: {fileID: 2987590500390519789}
+  f: {fileID: 2987590501335447593}
+  g: {fileID: 2987590500846956291}
+  a: {fileID: 2987590499776719319}
+  b: {fileID: 2987590501462400396}
 --- !u!1 &2987590501335447591
 GameObject:
   m_ObjectHideFlags: 0

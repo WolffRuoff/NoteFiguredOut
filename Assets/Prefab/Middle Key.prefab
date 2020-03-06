@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4635300350888225412}
   - component: {fileID: 1421821356314835791}
-  - component: {fileID: 5913741915503656892}
+  - component: {fileID: 7559176345170398028}
+  - component: {fileID: 7178698151122937089}
   m_Layer: 0
   m_Name: Middle Key
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3400404385833487166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.056836, y: 1.0044967, z: 0}
+  m_LocalPosition: {x: 7.4342, y: -0.3349, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &5913741915503656892
+--- !u!60 &7559176345170398028
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,14 +108,25 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.33779764, y: 2.33813}
-      - {x: -0.14222431, y: -0.1391629}
-      - {x: -0.31174803, y: -0.29092675}
-      - {x: -0.64546347, y: -0.27918172}
-      - {x: -0.59447145, y: -2.33813}
-      - {x: 0.61621904, y: -2.33813}
-      - {x: 0.6640444, y: -0.3261094}
-      - {x: 0.31199265, y: -0.31538832}
-      - {x: 0.28999996, y: -0.13271314}
-      - {x: 0.13879633, y: -0.13422006}
-      - {x: 0.31605005, y: 2.33813}
+    - - {x: -0.3207507, y: 2.3444448}
+      - {x: -0.3203516, y: -0.29042155}
+      - {x: -0.64311695, y: -0.2894818}
+      - {x: -0.64444447, y: -2.3444445}
+      - {x: 0.64444447, y: -2.3444445}
+      - {x: 0.6400857, y: -0.30092183}
+      - {x: 0.3168726, y: -0.29210147}
+      - {x: 0.32080078, y: 2.3440237}
+--- !u!114 &7178698151122937089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3400404385833487166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af9ca4dac67f940528b9332ad80cf8a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  random: 0
+  level: 1

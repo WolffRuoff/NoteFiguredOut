@@ -5,7 +5,8 @@ using UnityEngine;
 public class Levels : MonoBehaviour
 {
 
-    private static Levels first;
+    private static Levels _instance;
+    private static bool first = true;
 
     private Levels() { }
 
@@ -13,14 +14,14 @@ public class Levels : MonoBehaviour
 
     void Start()
     {
-        first = null;
+
     }
 
-    public static ref Levels getInstance()
+    public static Levels getInstance()
     {
-        if (first == null)
+        if (first)
         {
-            first = new Levels();
+            _instance = new Levels();
             //Twinkle Twinkle Little Star
             Queue<KeyValuePair<char, int>> level1 = new Queue<KeyValuePair<char, int>>();
             level1.Enqueue(new KeyValuePair<char, int>('c', 4));
@@ -65,23 +66,30 @@ public class Levels : MonoBehaviour
             level1.Enqueue(new KeyValuePair<char, int>('d', 4));
             level1.Enqueue(new KeyValuePair<char, int>('d', 4));
             level1.Enqueue(new KeyValuePair<char, int>('c', 4));
-            first.songs.Add(1, level1);
+            _instance.songs.Add(1, level1);
 
-            Queue<KeyValuePair<char, int>> level2 = new Queue<KeyValuePair<char, int>>();
-            level2.Enqueue(new KeyValuePair<char, int>('b', 5));
+            //Queue<KeyValuePair<char, int>> level2 = new Queue<KeyValuePair<char, int>>();
+            //level2.Enqueue(new KeyValuePair<char, int>('b', 5));
+
+            first = false;
         }
 
-        return ref first;
+        return _instance;
     }
 
     public KeyValuePair<char, int> getNextNote(int levelNum)
     {
 
-        return songs[levelNum].Dequeue();
+        return _instance.songs[levelNum].Dequeue();
     }
 
     public bool isEmpty(int levelNum)
     {
-        return songs[levelNum].Count == 0;
+        return _instance.songs[levelNum].Count == 0;
+    }
+
+    public static void setFirst ()
+    {
+        first = true;
     }
 }

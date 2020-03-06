@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Platform : MonoBehaviour
 {
@@ -53,7 +53,16 @@ public class Platform : MonoBehaviour
             else
             {
                 Levels curr = Levels.getInstance();
-                pair = curr.getNextNote(level);
+                if (!curr.isEmpty(level))
+                {
+                    pair = curr.getNextNote(level);
+                } else
+                {
+                    // player wins
+                    Levels.setFirst();
+                    SceneManager.LoadScene("StartMenu");
+                }
+                
             }
 
             if (pair.Key == 'c')
@@ -86,6 +95,7 @@ public class Platform : MonoBehaviour
             }
 
             Notes.Instance.Note(pair.Key, pair.Value);
+            Debug.Log(pair.Key);
         }
     }
 }

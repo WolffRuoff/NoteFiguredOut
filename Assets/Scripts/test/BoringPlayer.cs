@@ -28,7 +28,7 @@ public class BoringPlayer : MonoBehaviour
             vel.x = 1 * speed;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             vel.y = 1 * jump;
         }

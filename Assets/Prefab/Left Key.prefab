@@ -108,12 +108,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.61622, y: 2.359878}
-      - {x: -0.65971565, y: -2.3598778}
-      - {x: 0.6597147, y: -2.316382}
-      - {x: 0.6162205, y: -0.37791848}
-      - {x: 0.29332495, y: -0.35400152}
-      - {x: 0.33779716, y: 2.316382}
+    - - {x: -0.6442394, y: 2.3441958}
+      - {x: -0.6446676, y: -2.344251}
+      - {x: 0.6440072, y: -2.3446555}
+      - {x: 0.6376729, y: -0.3067798}
+      - {x: 0.30899572, y: -0.30606318}
+      - {x: 0.30471277, y: 2.3437715}
 --- !u!114 &8225068496888253945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,13 +128,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   random: 0
   level: 0
-  timer: 5
-  c: {fileID: 0}
-  d: {fileID: 0}
-  e: {fileID: 0}
-  f: {fileID: 0}
-  g: {fileID: 0}
-  a: {fileID: 0}
-  b: {fileID: 0}
-  player: {fileID: 0}
-  jumpHeight: 5

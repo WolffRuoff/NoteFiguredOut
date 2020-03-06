@@ -18,7 +18,7 @@ public class test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while (!level.isEmpty(0))
+        if (!level.isEmpty(0))
         {
             timer -= Time.deltaTime;
             if (timer < 0)

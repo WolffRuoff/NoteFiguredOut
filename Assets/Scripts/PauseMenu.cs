@@ -16,7 +16,6 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour {
 
 	public string mainMenuScene = "StartMenu";
-	public string pauseMenuScene = "PauseMenu";
     public GameObject pauseMenuCanvas;
 
     void Start()

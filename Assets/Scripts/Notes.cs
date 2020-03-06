@@ -50,8 +50,11 @@ public class Notes : MonoBehaviour
         if (octive == 6) { sound.clip = c6; }
         if (octive == 7) { sound.clip = c7; }
 
-
-        if(note == 'd')
+        if(note == 'c')
+        {
+            sound.pitch = Mathf.Pow(1.05946f, 1f);
+        }
+        else if(note == 'd')
         {
             sound.pitch = Mathf.Pow(1.05946f, 2f);
         }

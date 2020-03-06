@@ -68,10 +68,42 @@ public class Levels : MonoBehaviour
             level1.Enqueue(new KeyValuePair<char, int>('c', 4));
             _instance.songs.Add(1, level1);
 
-            //Queue<KeyValuePair<char, int>> level2 = new Queue<KeyValuePair<char, int>>();
-            //level2.Enqueue(new KeyValuePair<char, int>('b', 5));
+            Queue<KeyValuePair<char, int>> level2 = new Queue<KeyValuePair<char, int>>();
+            level2.Enqueue(new KeyValuePair<char, int>('e', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('a', 4));
+            level2.Enqueue(new KeyValuePair<char, int>('b', 4));
+            level2.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('d', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('e', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('e', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('a', 4));
+            level2.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('a', 4));
+            level2.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level2.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('a', 4));
+            level2.Enqueue(new KeyValuePair<char, int>('d', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('b', 4));
+            level2.Enqueue(new KeyValuePair<char, int>('a', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('a', 4));
+            level2.Enqueue(new KeyValuePair<char, int>('b', 4));
+            level2.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('d', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('e', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('e', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('a', 4));
+            level2.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('a', 4));
+            level2.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level2.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level2.Enqueue(new KeyValuePair<char, int>('a', 4));
+            _instance.songs.Add(2, level2);
 
             first = false;
+
         }
 
         return _instance;

@@ -10,16 +10,16 @@ public class GameController : MonoBehaviour
     public float yValueIncrease;
     public float xValueIncrease;
     public Button[] buttons;
-
-    public float timer = 2f;
+    public float timerVal = 2f;
 
     private static int note = -1;
     private static int selection = -1;
+    private float timer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        timer = timerVal;
     }
 
     // Update is called once per frame
@@ -29,6 +29,7 @@ public class GameController : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer < 0f)
         {
+            timer = timerVal;
             if (selection == note && note != -1)
             {
                 // correct answer

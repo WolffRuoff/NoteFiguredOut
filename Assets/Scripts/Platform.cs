@@ -7,72 +7,16 @@ public class Platform : MonoBehaviour
 {
     public bool random = false;
     public int level = 0;
-    public float timer = 2f;
-    public Button c;
-    public Button d;
-    public Button e;
-    public Button f;
-    public Button g;
-    public Button a;
-    public Button b;
 
-    public GameObject player;
-    public float jumpHeight;
-
-    private bool active = false;
     private KeyValuePair<char, int> pair;
-
-    void Update()
-    {
-        if (active)
-        {
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                GameController.RecieveInput(0);
-                c.Select();
-            }
-            else if (Input.GetKeyDown(KeyCode.D))
-            {
-                GameController.RecieveInput(1);
-                d.Select();
-            }
-            else if (Input.GetKeyDown(KeyCode.E))
-            {
-                GameController.RecieveInput(2);
-                e.Select();
-            }
-            else if (Input.GetKeyDown(KeyCode.F))
-            {
-                GameController.RecieveInput(3);
-                f.Select();
-            }
-            else if (Input.GetKeyDown(KeyCode.G))
-            {
-                GameController.RecieveInput(4);
-                g.Select();
-            }
-            else if (Input.GetKeyDown(KeyCode.A))
-            {
-                GameController.RecieveInput(5);
-                a.Select();
-            }
-            else if (Input.GetKeyDown(KeyCode.B))
-            {
-                GameController.RecieveInput(6);
-                b.Select();
-            }
-        } 
-    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("player"))
         {
-            KeyValuePair<char, int> pair;
             if (random)
             {
                 char note;
-                int octave = Random.Range(1, 7);
                 int randNote = Random.Range(1, 7);
 
                 if (randNote == 1)
@@ -104,16 +48,13 @@ public class Platform : MonoBehaviour
                     note = 'b';
                 }
 
-                pair = new KeyValuePair<char, int>(note, octave);
+                pair = new KeyValuePair<char, int>(note, 4);
             }
             else
             {
                 Levels curr = Levels.getInstance();
                 pair = curr.getNextNote(level);
             }
-
-            Notes.Instance.Note(pair.Key, pair.Value);
-            active = true;
 
             if (pair.Key == 'c')
             {
@@ -143,6 +84,8 @@ public class Platform : MonoBehaviour
             {
                 GameController.RecieveNote(6);
             }
+
+            Notes.Instance.Note(pair.Key, pair.Value);
         }
     }
 }

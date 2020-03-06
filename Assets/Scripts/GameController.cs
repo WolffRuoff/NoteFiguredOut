@@ -8,9 +8,6 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     public GameObject player;
-    public float x;
-    public float y;
-    public Button[] buttons;
     public Text t;
     public float timerVal = 2f;
     public EventSystem es;
@@ -21,21 +18,17 @@ public class GameController : MonoBehaviour
     private static bool active = false;
     private int move = 0;
     private float timer;
-    private Rigidbody2D rgb;
 
     // Start is called before the first frame update
     void Start()
     {
         timer = timerVal;
-        rgb = player.GetComponent<Rigidbody2D>();
         t.text = "Score: " + score;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 vel = new Vector2(0, 0);
-
         if (active)
         {
             timer -= Time.deltaTime;
@@ -58,12 +51,8 @@ public class GameController : MonoBehaviour
                     // reset timer
                     timer = timerVal;
 
-                    // reset button colors
+                    // reset selected button color
                     es.SetSelectedGameObject(null);
-                    //foreach (Button b in buttons)
-                    //{
-                    //b.Select();
-                    //}
 
                     // update score
                     t.text = "Score: " + ++score;

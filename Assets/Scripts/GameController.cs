@@ -39,6 +39,9 @@ public class GameController : MonoBehaviour
                     b.image.color = Color.white;
                 }
 
+                // update score
+                ScoreKeeper.ReceiveUpdate();
+
                 // move player to next platform (causes onCollisionEnter2D in Platform.cs)
                 vel.x = xValueIncrease;
                 vel.y = yValueIncrease;

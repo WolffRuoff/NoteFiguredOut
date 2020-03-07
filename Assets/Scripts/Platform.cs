@@ -14,6 +14,10 @@ public class Platform : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("player"))
         {
+            // stop player from sliding
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+
+            // assign platform a note
             if (random)
             {
                 char note;
@@ -65,6 +69,7 @@ public class Platform : MonoBehaviour
                 
             }
 
+            // send selection to GameController
             if (pair.Key == 'c')
             {
                 GameController.RecieveNote(0);
@@ -94,6 +99,7 @@ public class Platform : MonoBehaviour
                 GameController.RecieveNote(6);
             }
 
+            // play the note
             Notes.Instance.Note(pair.Key, pair.Value);
             Debug.Log(pair.Key);
         }

@@ -409,7 +409,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuScene: StartMenu
-  pauseMenuScene: PauseMenu
   pauseMenuCanvas: {fileID: 0}
 --- !u!4 &758261378
 Transform:
@@ -760,7 +759,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1570413234}
   t: {fileID: 908930826}
-  timerVal: 3
+  timerVal: 1.5
+  firstJump: 2.85
+  bridgeToMiddle: 3.329
+  middleToMiddle: 2.755
   es: {fileID: 1611633226}
 --- !u!4 &1503258179
 Transform:
@@ -782,20 +784,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 311262921}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1570413235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570413234}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a87519dad2c0a83458abac1bf1f0f805, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  jump: 2
 --- !u!4 &1570413239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5720690098463202086, guid: 71ee1d13bf3f849c0b442f89fd8df182,

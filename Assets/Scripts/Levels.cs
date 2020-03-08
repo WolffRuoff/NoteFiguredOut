@@ -12,11 +12,6 @@ public class Levels : MonoBehaviour
 
     private Dictionary<int, Queue<KeyValuePair<char, int>>> songs = new Dictionary<int, Queue<KeyValuePair<char, int>>>();
 
-    void Start()
-    {
-
-    }
-
     public static Levels getInstance()
     {
         if (first)
@@ -111,17 +106,20 @@ public class Levels : MonoBehaviour
 
     public KeyValuePair<char, int> getNextNote(int levelNum)
     {
-
+        // returns the next note to assign to a platform
         return _instance.songs[levelNum].Dequeue();
     }
 
     public bool isEmpty(int levelNum)
     {
+        // returns whether or not the song is over
         return _instance.songs[levelNum].Count == 0;
     }
 
     public static void setFirst ()
     {
+        // since the singleton object is static, need to reset when scene restarts
+        // called whenever the player loses
         first = true;
     }
 }

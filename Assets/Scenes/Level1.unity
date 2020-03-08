@@ -757,12 +757,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c14ec9763f34a15a3125fc3a2e86bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1570413234}
-  t: {fileID: 908930826}
   timerVal: 1.5
   firstJump: 2.85
   bridgeToMiddle: 3.329
   middleToMiddle: 2.755
+  t: {fileID: 908930826}
   es: {fileID: 1611633226}
 --- !u!4 &1503258179
 Transform:
@@ -778,12 +777,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1570413234 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5720690098463202090, guid: 71ee1d13bf3f849c0b442f89fd8df182,
-    type: 3}
-  m_PrefabInstance: {fileID: 311262921}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1570413239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5720690098463202086, guid: 71ee1d13bf3f849c0b442f89fd8df182,

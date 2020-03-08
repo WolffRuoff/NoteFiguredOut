@@ -14,8 +14,9 @@ public class Platform : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("player"))
         {
-            // stop player from sliding
+            // stop player from sliding and recenter so that it never goes off the edge
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            GameController.center();
 
             // assign platform a note
             if (random)

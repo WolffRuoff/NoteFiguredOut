@@ -24,6 +24,8 @@ public class PlayerAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if player is moving, animate the sprite
+        // loops through the animation every length seconds
         if (Math.Abs(rgb.velocity.x) > 0 && Math.Abs(rgb.velocity.y) > 0)
         {
             timer -= Time.deltaTime;

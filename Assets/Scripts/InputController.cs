@@ -15,6 +15,7 @@ public class InputController : MonoBehaviour
 
     void Update()
     {
+        // get input from keyboard and highlight that button on the screen
         if (Input.GetKeyDown(KeyCode.C))
         {
             Send(0);
@@ -52,6 +53,7 @@ public class InputController : MonoBehaviour
         }
     }
 
+    // function that is assigned to clicking the buttons on the UI during gameplay
     public void Send (int note)
     {
         GameController.RecieveInput(note);

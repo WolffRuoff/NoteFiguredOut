@@ -54,7 +54,7 @@ public class Notes : MonoBehaviour
 
         if(note == 'c')
         {
-            sound.pitch = Mathf.Pow(1.05946f, 1f);
+            sound.pitch = Mathf.Pow(1.05946f, 0f);
         }
         else if(note == 'd')
         {

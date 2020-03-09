@@ -18,6 +18,9 @@ public class Platform : MonoBehaviour
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             GameController.center();
 
+            // send info to GameController
+            GameController.RecievePlatform(transform);
+
             // assign platform a note
             if (random)
             {

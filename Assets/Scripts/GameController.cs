@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public float firstJump = 2.85f;
     public float bridgeToMiddle = 3.329f;
     public float middleToMiddle = 2.755f;
+    public static int move = -1;
     public Text t;
     public EventSystem es;
 
@@ -20,10 +21,10 @@ public class GameController : MonoBehaviour
     private static int selection = -1;
     private static bool active = false;
     private int score = 0;
-    public static int move = -1;
     private float timer;
     private Rigidbody2D rgb;
     private static float prevX;
+    private static Transform currentPlatform;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +54,8 @@ public class GameController : MonoBehaviour
                     // maybe add a fade to black?
                     // not sure if we wanna restart current level or return to main menu
                     Levels.setFirst();
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    currentPlatform.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+                    active = false;
                 } else
                 {
                     // set up for next platform
@@ -113,6 +115,11 @@ public class GameController : MonoBehaviour
         // update the current note that is being played and start the timer
         note = n;
         active = true;
+    }
+
+    public static void RecievePlatform(Transform t)
+    {
+        currentPlatform = t;
     }
 
     public static void center ()

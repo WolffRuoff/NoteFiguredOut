@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     public Text points;
     public Text noteMissed;
     public EventSystem es;
+    public Image timeBar;
 
     private static int note = -1;
     private static int selection = -1;
@@ -27,6 +28,8 @@ public class GameController : MonoBehaviour
     private Rigidbody2D rgb;
     private static float prevX;
     private static Transform currentPlatform;
+    private float maxTime;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +40,7 @@ public class GameController : MonoBehaviour
         selection = -1;
         active = false;
         move = -1;
-        timer = timerVal;
+        timer = maxTime = timerVal;
         t.text = "Score: " + score;
         rgb = player.GetComponent<Rigidbody2D>();
     }
@@ -47,8 +50,12 @@ public class GameController : MonoBehaviour
     {
         if (active)
         {
-            timer -= Time.deltaTime;
-            if (timer < 0f)
+            if (timer > 0f)
+            {
+                timer -= Time.deltaTime;
+                timeBar.fillAmount = timer / maxTime;
+            }
+            else
             {
                 // check if answer is incorrect or timer ran out before a selection was made
                 if (selection != note || selection == -1 || note == -1)

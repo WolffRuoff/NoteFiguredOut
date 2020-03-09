@@ -1567,7 +1567,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Note Figured Out
+  m_Text: Pitch Penguin
 --- !u!222 &1652506246
 CanvasRenderer:
   m_ObjectHideFlags: 0

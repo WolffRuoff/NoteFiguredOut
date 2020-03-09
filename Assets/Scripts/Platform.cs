@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Platform : MonoBehaviour
@@ -10,10 +11,12 @@ public class Platform : MonoBehaviour
     public GameObject IGUI;
     public GameObject YWUI;
     public CanvasGroup cg;
+    public Text points;
 
     private KeyValuePair<char, int> pair;
     private static bool active = true;
     private CanvasGroup igcg;
+    private int score;
 
     void Start()
     {
@@ -86,6 +89,15 @@ public class Platform : MonoBehaviour
                         Notes.Instance.setActive(false);
                         InputController.setActive(false);
                         CameraController.setActive(false);
+                        score = GameController.getScore();
+                        if (score == 1)
+                        {
+                            points.text = "You Scored " + score + " Point!";
+                        }
+                        else
+                        {
+                            points.text = "You Scored " + score + " Points!";
+                        }
                         active = false;
                         StartCoroutine(win());
                     }

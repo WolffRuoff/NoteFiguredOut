@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
     private static int note = -1;
     private static int selection = -1;
     private static bool active = false;
-    private int score = 0;
+    private static int score = 0;
     private float timer;
     private Rigidbody2D rgb;
     private static float prevX;
@@ -209,6 +209,11 @@ public class GameController : MonoBehaviour
     public static void setWon(bool tf)
     {
         won = tf;
+    }
+
+    public static int getScore ()
+    {
+        return score;
     }
 
     public static void center ()

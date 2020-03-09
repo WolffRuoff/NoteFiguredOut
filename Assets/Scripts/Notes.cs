@@ -84,95 +84,10 @@ public class Notes : MonoBehaviour
             sound.pitch = Mathf.Pow(1.05946f, 11f);
         }
         sound.Play();
-    }/*
-    public AudioSource C(int octave)
-    {
-        if (octave == 1) sound.clip = c1;
-        if (octave == 2) sound.clip = c2;
-        if (octave == 3) sound.clip = c3;
-        if (octave == 4) sound.clip = c4;
-        if (octave == 5) sound.clip = c5;
-        if (octave == 6) sound.clip = c6;
-        if (octave == 7) sound.clip = c7;
-
-        return sound;
     }
-    public AudioSource D(int octave)
-    {
-        if (octave == 1) sound.clip = c1;
-        if (octave == 2) sound.clip = c2;
-        if (octave == 3) sound.clip = c3;
-        if (octave == 4) sound.clip = c4;
-        if (octave == 5) sound.clip = c5;
-        if (octave == 6) sound.clip = c6;
-        if (octave == 7) sound.clip = c7;
 
-        sound.pitch = Mathf.Pow(1.05946f, 2f);
-        return sound;
+    public void setActive(bool tf)
+    {
+        sound.enabled = tf;
     }
-    public AudioSource E(int octave)
-    {
-        if (octave == 1) sound.clip = c1;
-        if (octave == 2) sound.clip = c2;
-        if (octave == 3) sound.clip = c3;
-        if (octave == 4) sound.clip = c4;
-        if (octave == 5) sound.clip = c5;
-        if (octave == 6) sound.clip = c6;
-        if (octave == 7) sound.clip = c7;
-
-        sound.pitch = Mathf.Pow(1.05946f, 4f);
-        return sound;
-    }
-    public AudioSource F(int octave)
-    {
-        if (octave == 1) sound.clip = c1;
-        if (octave == 2) sound.clip = c2;
-        if (octave == 3) sound.clip = c3;
-        if (octave == 4) sound.clip = c4;
-        if (octave == 5) sound.clip = c5;
-        if (octave == 6) sound.clip = c6;
-        if (octave == 7) sound.clip = c7;
-
-        sound.pitch = Mathf.Pow(1.05946f, 5f);
-        return sound;
-    }
-    public AudioSource G(int octave)
-    {
-        if (octave == 1) sound.clip = c1;
-        if (octave == 2) sound.clip = c2;
-        if (octave == 3) sound.clip = c3;
-        if (octave == 4) sound.clip = c4;
-        if (octave == 5) sound.clip = c5;
-        if (octave == 6) sound.clip = c6;
-        if (octave == 7) sound.clip = c7;
-
-        sound.pitch = Mathf.Pow(1.05946f, 7f);
-        return sound;
-    }
-    public AudioSource A(int octave)
-    {
-        if (octave == 1) sound.clip = c1;
-        if (octave == 2) sound.clip = c2;
-        if (octave == 3) sound.clip = c3;
-        if (octave == 4) sound.clip = c4;
-        if (octave == 5) sound.clip = c5;
-        if (octave == 6) sound.clip = c6;
-        if (octave == 7) sound.clip = c7;
-
-        sound.pitch = Mathf.Pow(1.05946f, 9f);
-        return sound;
-    }
-    public AudioSource B(int octave)
-    {
-        if (octave == 1) sound.clip = c1;
-        if (octave == 2) sound.clip = c2;
-        if (octave == 3) sound.clip = c3;
-        if (octave == 4) sound.clip = c4;
-        if (octave == 5) sound.clip = c5;
-        if (octave == 6) sound.clip = c6;
-        if (octave == 7) sound.clip = c7;
-
-        sound.pitch = Mathf.Pow(1.05946f, 11f);
-        return sound;
-    } */
 }

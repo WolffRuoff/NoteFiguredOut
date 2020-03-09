@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour
     public float middleToMiddle = 2.755f;
     public static int move = -1;
     public Text t;
+    public Text points;
+    public Text noteMissed;
     public EventSystem es;
 
     private static int note = -1;
@@ -51,9 +53,44 @@ public class GameController : MonoBehaviour
                 // check if answer is incorrect or timer ran out before a selection was made
                 if (selection != note || selection == -1 || note == -1)
                 {
-                    // maybe add a fade to black?
-                    // not sure if we wanna restart current level or return to main menu
                     Levels.setFirst();
+                    if (score == 1)
+                    {
+                        points.text = "You Scored " + score + " Point!";
+                    } else
+                    {
+                        points.text = "You Scored " + score + " Points!";
+                    }
+                    
+                    if (note == 0)
+                    {
+                        noteMissed.text = "C";
+                    }
+                    else if (note == 1)
+                    {
+                        noteMissed.text = "D";
+                    }
+                    else if (note == 2)
+                    {
+                        noteMissed.text = "E";
+                    }
+                    else if (note == 3)
+                    {
+                        noteMissed.text = "F";
+                    }
+                    else if (note == 4)
+                    {
+                        noteMissed.text = "G";
+                    }
+                    else if (note == 5)
+                    {
+                        noteMissed.text = "A";
+                    }
+                    else if (note == 6)
+                    {
+                        noteMissed.text = "B";
+                    }
+
                     currentPlatform.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
                     active = false;
                 } else

@@ -8,7 +8,8 @@ public class PlayerAnimator : MonoBehaviour
 {
     public Sprite[] sprites = new Sprite[3];
     public float length = .7f;
-    public GameObject UI;
+    public GameObject IGUI;
+    public GameObject YLUI;
     public CanvasGroup cg;
 
     private Rigidbody2D rgb;
@@ -29,7 +30,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         // if player is moving, animate the sprite
         // loops through the animation every length seconds
-        if (Math.Abs(rgb.velocity.x) > 0 || Math.Abs(rgb.velocity.y) > 0)
+        if (Math.Abs(rgb.velocity.x) > 0 && Math.Abs(rgb.velocity.y) > 0)
         {
             timer -= Time.deltaTime;
             if (timer < 0)
@@ -47,7 +48,8 @@ public class PlayerAnimator : MonoBehaviour
 
         if (transform.position.y < -3)
         {
-            UI.SetActive(false);
+            Notes.Instance.setActive(false);
+            IGUI.SetActive(false);
             StartCoroutine(fade());
         }
     }
@@ -56,11 +58,11 @@ public class PlayerAnimator : MonoBehaviour
     {
         while (cg.alpha < 1)
         {
-            cg.alpha += Time.deltaTime / 2;
+            cg.alpha += Time.deltaTime / 3;
             yield return null;
         }
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        YLUI.SetActive(true);
         yield return null;
     }
 }

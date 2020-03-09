@@ -8,14 +8,23 @@ public class CameraController : MonoBehaviour
     public Transform player;
     public float offsetX;
 
+    private static bool active = true;
+
     void Update()
     {
-        Vector3 pos = transform.position;
-        if (pos.x <= player.position.x + offsetX)
+        if (active)
         {
-            pos.x = player.position.x + offsetX;
-            transform.position = pos;
+            Vector3 pos = transform.position;
+            if (pos.x <= player.position.x + offsetX)
+            {
+                pos.x = player.position.x + offsetX;
+                transform.position = pos;
+            }
         }
-        
+    }
+
+    public static void setActive(bool tf)
+    {
+        active = tf;
     }
 }

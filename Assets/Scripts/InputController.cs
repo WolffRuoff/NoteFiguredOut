@@ -13,43 +13,56 @@ public class InputController : MonoBehaviour
     public Button a;
     public Button b;
 
+    private static bool active = true;
+
     void Update()
     {
         // get input from keyboard and highlight that button on the screen
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && active)
         {
             Send(0);
             c.Select();
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKeyDown(KeyCode.D) && active)
         {
             Send(1);
             d.Select();
         }
-        else if (Input.GetKeyDown(KeyCode.E))
+        else if (Input.GetKeyDown(KeyCode.E) && active)
         {
             Send(2);
             e.Select();
         }
-        else if (Input.GetKeyDown(KeyCode.F))
+        else if (Input.GetKeyDown(KeyCode.F) && active)
         {
             Send(3);
             f.Select();
         }
-        else if (Input.GetKeyDown(KeyCode.G))
+        else if (Input.GetKeyDown(KeyCode.G) && active)
         {
             Send(4);
             g.Select();
         }
-        else if (Input.GetKeyDown(KeyCode.A))
+        else if (Input.GetKeyDown(KeyCode.A) && active)
         {
             Send(5);
             a.Select();
         }
-        else if (Input.GetKeyDown(KeyCode.B))
+        else if (Input.GetKeyDown(KeyCode.B) && active)
         {
             Send(6);
             b.Select();
+        }
+
+        if (!active)
+        {
+            c.enabled = false;
+            d.enabled = false;
+            e.enabled = false;
+            f.enabled = false;
+            g.enabled = false;
+            a.enabled = false;
+            b.enabled = false;
         }
     }
 
@@ -57,5 +70,10 @@ public class InputController : MonoBehaviour
     public void Send (int note)
     {
         GameController.RecieveInput(note);
+    }
+
+    public static void setActive(bool tf)
+    {
+        active = tf;
     }
 }

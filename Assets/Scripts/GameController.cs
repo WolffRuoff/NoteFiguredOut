@@ -29,6 +29,7 @@ public class GameController : MonoBehaviour
     private static float prevX;
     private static Transform currentPlatform;
     private float maxTime;
+    private static bool won;
     
 
     // Start is called before the first frame update
@@ -50,7 +51,7 @@ public class GameController : MonoBehaviour
     {
         if (active)
         {
-            if (timer > 0f)
+            if (timer > 0f && active)
             {
                 timer -= Time.deltaTime;
                 timeBar.fillAmount = timer / maxTime;
@@ -146,6 +147,40 @@ public class GameController : MonoBehaviour
                 }
             }
         }
+        else if (won)
+        {
+            timer -= Time.deltaTime;
+            if (timer < 0)
+            {
+                timer = timerVal;
+                prevX = player.transform.position.x;
+                if (move == 0)
+                {
+                    rgb.AddForce(new Vector2(firstJump, firstJump), ForceMode2D.Impulse);
+                }
+                else if (move == 1)
+                {
+                    rgb.AddForce(new Vector2(bridgeToMiddle, bridgeToMiddle), ForceMode2D.Impulse);
+                }
+                else if (move == 2)
+                {
+                    rgb.AddForce(new Vector2(bridgeToMiddle, bridgeToMiddle), ForceMode2D.Impulse);
+                }
+                else if (move == 3)
+                {
+                    rgb.AddForce(new Vector2(middleToMiddle, middleToMiddle), ForceMode2D.Impulse);
+                }
+                else if (move == 4)
+                {
+                    rgb.AddForce(new Vector2(bridgeToMiddle, bridgeToMiddle), ForceMode2D.Impulse);
+                }
+                else if (move == 5)
+                {
+                    rgb.AddForce(new Vector2(bridgeToMiddle, bridgeToMiddle), ForceMode2D.Impulse);
+                }
+            }
+            
+        }
     }
 
     public static void RecieveInput(int n)
@@ -164,6 +199,16 @@ public class GameController : MonoBehaviour
     public static void RecievePlatform(Transform t)
     {
         currentPlatform = t;
+    }
+
+    public static void setActive(bool tf)
+    {
+        active = tf;
+    }
+
+    public static void setWon(bool tf)
+    {
+        won = tf;
     }
 
     public static void center ()

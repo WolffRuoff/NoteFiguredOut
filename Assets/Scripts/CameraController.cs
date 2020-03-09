@@ -10,6 +10,11 @@ public class CameraController : MonoBehaviour
 
     private static bool active = true;
 
+    void Start()
+    {
+        active = true;
+    }
+
     void Update()
     {
         if (active)

@@ -20,7 +20,8 @@ public class Platform : MonoBehaviour
 
     void Start()
     {
-        igcg = IGUI.GetComponent<CanvasGroup>(); 
+        igcg = IGUI.GetComponent<CanvasGroup>();
+        active = true;
     }
 
     void OnCollisionEnter2D(Collision2D collision)

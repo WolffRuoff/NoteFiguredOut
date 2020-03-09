@@ -15,6 +15,11 @@ public class InputController : MonoBehaviour
 
     private static bool active = true;
 
+    void Start()
+    {
+        setActive(true);
+    }
+
     void Update()
     {
         // get input from keyboard and highlight that button on the screen

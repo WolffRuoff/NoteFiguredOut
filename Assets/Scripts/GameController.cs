@@ -40,7 +40,9 @@ public class GameController : MonoBehaviour
         note = -1;
         selection = -1;
         active = false;
+        won = false;
         move = -1;
+        score = 0;
         timer = maxTime = timerVal;
         t.text = "Score: " + score;
         rgb = player.GetComponent<Rigidbody2D>();

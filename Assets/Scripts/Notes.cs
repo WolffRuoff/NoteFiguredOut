@@ -38,6 +38,8 @@ public class Notes : MonoBehaviour
     void Start()
     {
         sound = GetComponent<AudioSource>();
+        setActive(true);
+
     }
 
     public void Note(char note, int octive)

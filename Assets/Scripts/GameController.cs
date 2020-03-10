@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour
     private static Transform currentPlatform;
     private float maxTime;
     private static bool won;
+    private bool blink;
     
 
     // Start is called before the first frame update
@@ -46,6 +47,7 @@ public class GameController : MonoBehaviour
         timer = maxTime = timerVal;
         t.text = "Score: " + score;
         rgb = player.GetComponent<Rigidbody2D>();
+        blink = false;
     }
 
     // Update is called once per frame
@@ -57,6 +59,20 @@ public class GameController : MonoBehaviour
             {
                 timer -= Time.deltaTime;
                 timeBar.fillAmount = timer / maxTime;
+
+                if (timer < maxTime / 3)
+                {
+                    if (blink == false)
+                    {
+                        timeBar.color = Color.red;
+                        blink = true;
+                    }
+                    else
+                    {
+                        timeBar.color = Color.white;
+                        blink = false;
+                    }
+                }
             }
             else
             {
@@ -67,11 +83,12 @@ public class GameController : MonoBehaviour
                     if (score == 1)
                     {
                         points.text = "You Scored " + score + " Point!";
-                    } else
+                    }
+                    else
                     {
                         points.text = "You Scored " + score + " Points!";
                     }
-                    
+
                     if (note == 0)
                     {
                         noteMissed.text = "C";
@@ -103,7 +120,8 @@ public class GameController : MonoBehaviour
 
                     currentPlatform.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
                     active = false;
-                } else
+                }
+                else
                 {
                     // set up for next platform
                     active = false;

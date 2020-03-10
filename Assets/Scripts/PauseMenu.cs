@@ -41,12 +41,14 @@ public class PauseMenu : MonoBehaviour {
 
 	public void Pause(){
 		pauseMenuCanvas.SetActive (true);
+		Time.timeScale = 0;
 		running = false;
 		GameManager.Pause();
 	}
 
 	public void UnPause(){
 		pauseMenuCanvas.SetActive (false);
+		Time.timeScale = 1;
 		running = true;
 		GameManager.Unpause();
 	}

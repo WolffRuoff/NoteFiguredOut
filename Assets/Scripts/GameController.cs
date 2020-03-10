@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     public Text noteMissed;
     public EventSystem es;
     public Image timeBar;
+    public static bool won;
 
     private static int note = -1;
     private static int selection = -1;
@@ -30,7 +31,6 @@ public class GameController : MonoBehaviour
     private static float prevX;
     private static Transform currentPlatform;
     private float maxTime;
-    private static bool won;
     private int deathIndex = 0;
     private bool blink;
     private bool deathOnce = true;
@@ -85,7 +85,7 @@ public class GameController : MonoBehaviour
             else
             {
                 // check if answer is incorrect or timer ran out before a selection was made
-                if (selection != note || selection == -1 || note == -1)
+                if ((selection != note || selection == -1) && note != -1)
                 {
                     Levels.setFirst();
                     if (score == 1)
@@ -302,7 +302,7 @@ public class GameController : MonoBehaviour
         while (deathIndex < deathSpr.Length)
         {
             player.GetComponent<SpriteRenderer>().sprite = deathSpr[deathIndex++];
-            yield return new WaitForSeconds(.09f);
+            yield return new WaitForSeconds(.075f);
         }
 
         currentPlatform.gameObject.GetComponent<PolygonCollider2D>().enabled = false;

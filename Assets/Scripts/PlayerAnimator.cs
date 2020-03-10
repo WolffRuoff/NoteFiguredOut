@@ -7,9 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerAnimator : MonoBehaviour
 {
     public Sprite[] sprites = new Sprite[3];
-    public Sprite[] death = new Sprite[4];
     public float length = .7f;
-    public float deathLength = .7f;
     public GameObject IGUI;
     public GameObject YLUI;
     public CanvasGroup cg;
@@ -17,8 +15,8 @@ public class PlayerAnimator : MonoBehaviour
     private Rigidbody2D rgb;
     private SpriteRenderer sr;
     private float timer;
-    private int i = 0;
     private static bool dead = false;
+    private int i = 0;
 
     // Start is called before the first frame update
     void Start()

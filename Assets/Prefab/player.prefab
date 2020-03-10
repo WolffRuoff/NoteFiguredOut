@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5720690098463202085}
   - component: {fileID: 8992374227622285753}
   - component: {fileID: 6695571519543108220}
-  - component: {fileID: 4848270110195861968}
   m_Layer: 0
   m_Name: player
   m_TagString: player
@@ -71,7 +70,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e0f6ec01ed1053848b0a8cdfc3e613e3, type: 3}
   - {fileID: 21300000, guid: 0285f72008d74f54aa85ae23a9819c91, type: 3}
   - {fileID: 21300000, guid: 83e5ae8b2d66499469a38a8bd0021c52, type: 3}
+  death:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   length: 0.7
+  deathLength: 0.7
   IGUI: {fileID: 0}
   YLUI: {fileID: 0}
   cg: {fileID: 0}
@@ -124,49 +129,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &4848270110195861968
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5720690098463202090}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.44, y: 1.28}
-    newSize: {x: 1.44, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.42, y: -0.26999998}
-      - {x: 0.34, y: -0.14999999}
-      - {x: 0.48, y: 0.089999996}
-      - {x: 0.48, y: 0.21}
-      - {x: 0.31, y: 0.34}
-      - {x: 0.29999998, y: 0.45}
-      - {x: 0.17, y: 0.61}
-      - {x: 0.089999996, y: 0.64}
-      - {x: -0.11, y: 0.64}
-      - {x: -0.14999999, y: 0.63}
-      - {x: -0.29, y: 0.57}
-      - {x: -0.37, y: 0.53}
-      - {x: -0.56, y: 0.31}
-      - {x: -0.59999996, y: 0.21}
-      - {x: -0.65999997, y: -0.22999999}
-      - {x: -0.65999997, y: -0.47}
-      - {x: -0.52, y: -0.64}
-      - {x: -0.049999997, y: -0.64}
-      - {x: 0.16, y: -0.51}
-      - {x: 0.39, y: -0.5}
-      - {x: 0.45999998, y: -0.42999998}

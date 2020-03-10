@@ -85,7 +85,7 @@ public class Platform : MonoBehaviour
                     else
                     {
                         // player wins
-                        active = false;
+                        setActive(false);
                         GameController.setActive(false);
                         GameController.setWon(true);
                         Notes.Instance.setActive(false);
@@ -106,31 +106,31 @@ public class Platform : MonoBehaviour
                 }
 
                 // send selection to GameController
-                if (pair.Key == 'c')
+                if (pair.Key == 'c' && !GameController.won)
                 {
                     GameController.RecieveNote(0);
                 }
-                else if (pair.Key == 'd')
+                else if (pair.Key == 'd' && !GameController.won)
                 {
                     GameController.RecieveNote(1);
                 }
-                else if (pair.Key == 'e')
+                else if (pair.Key == 'e' && !GameController.won)
                 {
                     GameController.RecieveNote(2);
                 }
-                else if (pair.Key == 'f')
+                else if (pair.Key == 'f' && !GameController.won)
                 {
                     GameController.RecieveNote(3);
                 }
-                else if (pair.Key == 'g')
+                else if (pair.Key == 'g' && !GameController.won)
                 {
                     GameController.RecieveNote(4);
                 }
-                else if (pair.Key == 'a')
+                else if (pair.Key == 'a' && !GameController.won)
                 {
                     GameController.RecieveNote(5);
                 }
-                else if (pair.Key == 'b')
+                else if (pair.Key == 'b' && !GameController.won)
                 {
                     GameController.RecieveNote(6);
                 }

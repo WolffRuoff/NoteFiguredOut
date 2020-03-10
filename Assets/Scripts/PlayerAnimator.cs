@@ -7,7 +7,9 @@ using UnityEngine.SceneManagement;
 public class PlayerAnimator : MonoBehaviour
 {
     public Sprite[] sprites = new Sprite[3];
+    public Sprite[] death = new Sprite[4];
     public float length = .7f;
+    public float deathLength = .7f;
     public GameObject IGUI;
     public GameObject YLUI;
     public CanvasGroup cg;
@@ -44,10 +46,15 @@ public class PlayerAnimator : MonoBehaviour
                 timer = length / sprites.Length;
                 i++;
             }
+        } else
+        {
+            sr.sprite = sprites[2];
+            i = 0;
         }
 
         if (transform.position.y < -3)
         {
+
             Notes.Instance.setActive(false);
             IGUI.SetActive(false);
             StartCoroutine(fade());

@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     public static GameObject player;
+    public Sprite[] deathSpr = new Sprite[4];
     public float timerVal = 2f;
     public float firstJump = 2.85f;
     public float bridgeToMiddle = 3.329f;
@@ -30,6 +31,8 @@ public class GameController : MonoBehaviour
     private static Transform currentPlatform;
     private float maxTime;
     private static bool won;
+    private int deathIndex = 0;
+    private float deathTimer = 5f;    
     private bool blink;
     
 
@@ -117,6 +120,8 @@ public class GameController : MonoBehaviour
                     {
                         noteMissed.text = "B";
                     }
+
+                    death();
 
                     currentPlatform.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
                     active = false;
@@ -279,5 +284,18 @@ public class GameController : MonoBehaviour
             move = 1;
         }
         player.transform.position = new Vector3(x, player.transform.position.y);
+    }
+
+    private void death()
+    {
+        while (deathIndex < deathSpr.Length)
+        {
+            deathTimer -= .1f;
+            if (deathTimer < 0)
+            {
+                player.GetComponent<SpriteRenderer>().sprite = deathSpr[deathIndex++];
+                deathTimer = 5f;
+            }
+        }
     }
 }

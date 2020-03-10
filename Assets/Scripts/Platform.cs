@@ -20,6 +20,7 @@ public class Platform : MonoBehaviour
 
     void Start()
     {
+        Levels.setFirst();
         igcg = IGUI.GetComponent<CanvasGroup>();
         active = true;
     }
@@ -84,7 +85,7 @@ public class Platform : MonoBehaviour
                     else
                     {
                         // player wins
-                        Levels.setFirst();
+                        active = false;
                         GameController.setActive(false);
                         GameController.setWon(true);
                         Notes.Instance.setActive(false);
@@ -99,7 +100,6 @@ public class Platform : MonoBehaviour
                         {
                             points.text = "You Scored " + score + " Points!";
                         }
-                        active = false;
                         StartCoroutine(win());
                     }
 
@@ -153,6 +153,11 @@ public class Platform : MonoBehaviour
         IGUI.SetActive(false);
         YWUI.SetActive(true);
         yield return null;
+    }
+
+    public static void setActive (bool tf)
+    {
+        active = tf;
     }
 }
 

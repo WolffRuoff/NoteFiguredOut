@@ -32,7 +32,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         // if player is moving, animate the sprite
         // loops through the animation every length seconds
-        if ((Math.Abs(rgb.velocity.x) > 0 && Math.Abs(rgb.velocity.y) > 0) && !dead) 
+        if ((Math.Round(Math.Abs(rgb.velocity.x)) > 0 && Math.Round(Math.Abs(rgb.velocity.y)) > 0) && !dead) 
         {
             timer -= Time.deltaTime;
             if (timer < 0)
@@ -46,7 +46,7 @@ public class PlayerAnimator : MonoBehaviour
                 timer = length / sprites.Length;
                 i++;
             }
-        } else if ((Math.Abs(rgb.velocity.x) == 0 && Math.Abs(rgb.velocity.y) == 0) && !dead)
+        } else if ((Math.Round(Math.Abs(rgb.velocity.x)) == 0 && Math.Round(Math.Abs(rgb.velocity.y)) == 0) && !dead)
         {
             sr.sprite = sprites[2];
             i = 0;

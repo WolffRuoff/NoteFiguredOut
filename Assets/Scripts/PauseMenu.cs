@@ -44,6 +44,7 @@ public class PauseMenu : MonoBehaviour {
 	public void Pause(){
 		pauseMenuCanvas.SetActive (true);
 		Time.timeScale = 0;
+		Notes.Instance.setActive(false);
 		running = false;
 		GameManager.Pause();
 	}
@@ -54,6 +55,7 @@ public class PauseMenu : MonoBehaviour {
         //make this wait. See Lecture 10 Juice, example menu
 		pauseMenuCanvas.SetActive (false);
 		Time.timeScale = 1;
+		Notes.Instance.setActive(true);
 		running = true;
 		GameManager.Unpause();
 	}

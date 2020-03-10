@@ -11,7 +11,8 @@ public class Tutorial : MonoBehaviour
     public float xValueIncrease;
     public Button[] buttons;
     public float timerVal = 2f;
-    public TextMesh text;
+    public Text[] text;
+    public int indexer;
 
     private static int note = -1;
     private static int selection = -1;
@@ -20,13 +21,69 @@ public class Tutorial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        text = gameObject.GetComponent<TextMesh>();
-        text.text = "Welcome to blablablah..."; 
+        indexer = 0;
+        text[0].enabled = true;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if (indexer == 0)
+            {
+                indexer++;
+                text[0].enabled = false;
+                text[indexer].enabled = true;
+            }
+
+            if (indexer == 1)
+            {
+                indexer++;
+                text[1].enabled = false;
+                text[indexer].enabled = true;
+            }
+
+            if (indexer == 2)
+            {
+                indexer++;
+                text[2].enabled = false;
+                text[indexer].enabled = true;
+            }
+
+            if (indexer == 3)
+            {
+                indexer++;
+                text[3].enabled = false;
+                //End the tutorial here
+            }
+
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+
+            if (indexer == 1)
+            {
+                indexer--;
+                text[1].enabled = false;
+                text[indexer].enabled = true;
+            }
+
+            if (indexer == 2)
+            {
+                indexer--;
+                text[2].enabled = false;
+                text[indexer].enabled = true;
+            }
+
+            if (indexer == 3)
+            {
+                indexer--;
+                text[3].enabled = false;
+                text[indexer].enabled = true;
+            }
+        }
+
     }
 }

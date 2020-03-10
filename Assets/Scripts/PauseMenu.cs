@@ -15,33 +15,41 @@ using UnityEngine;
 /// </summary>
 public class PauseMenu : MonoBehaviour {
 
+
 	public string mainMenuScene = "StartMenu";
-    public GameObject pauseMenuCanvas;
+    private GameObject pauseMenuCanvas;
+
+	private bool running;
 
     void Start()
     {
-		GameManager.gameState = GameManager.GameState.Running;
-		pauseMenuCanvas.SetActive (false);
+		pauseMenuCanvas = GameObject.Find("Pause Screen");
+		pauseMenuCanvas.SetActive(false);
+		running = true;
 	}
 
 	void Update(){
-		if (Input.GetKeyDown (KeyCode.Escape)) {
-			if (GameManager.gameState == GameManager.GameState.Running) {
-				Pause ();
+		if (Input.GetKeyDown (KeyCode.RightShift)) {
+			if (running) {
+				Pause();
 			}
-			else if (GameManager.gameState == GameManager.GameState.Paused) {
-				UnPause ();
+			else if (running==false) {
+				UnPause();
 			}
 		}
 	}
 
 	public void Pause(){
 		pauseMenuCanvas.SetActive (true);
+		Time.timeScale = 0;
+		running = false;
 		GameManager.Pause();
 	}
 
 	public void UnPause(){
 		pauseMenuCanvas.SetActive (false);
+		Time.timeScale = 1;
+		running = true;
 		GameManager.Unpause();
 	}
 
@@ -50,5 +58,15 @@ public class PauseMenu : MonoBehaviour {
 		GameManager.LoadScene (mainMenuScene);
 	}
 
-
+    public void OnClick()
+    {
+		if (running)
+		{
+			Pause();
+		}
+		else if (running == false)
+		{
+			UnPause();
+		}
+	}
 }

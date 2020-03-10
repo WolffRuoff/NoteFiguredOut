@@ -76,6 +76,11 @@ public class GameController : MonoBehaviour
                         blink = false;
                     }
                 }
+                else
+                {
+                    timeBar.color = Color.white;
+                    blink = false;
+                }
             }
             else
             {

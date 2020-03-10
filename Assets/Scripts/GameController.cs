@@ -34,6 +34,7 @@ public class GameController : MonoBehaviour
     private int deathIndex = 0;
     private float deathTimer = 5f;    
     private bool blink;
+    private bool deathOnce = true;
     
 
     // Start is called before the first frame update
@@ -121,10 +122,13 @@ public class GameController : MonoBehaviour
                         noteMissed.text = "B";
                     }
 
-                    death();
+                    if (deathOnce)
+                    {
+                        PlayerAnimator.setDead(true);
+                        StartCoroutine(death());
+                        deathOnce = false;
+                    }
 
-                    currentPlatform.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
-                    active = false;
                 }
                 else
                 {
@@ -286,16 +290,17 @@ public class GameController : MonoBehaviour
         player.transform.position = new Vector3(x, player.transform.position.y);
     }
 
-    private void death()
+
+    IEnumerator death()
     {
         while (deathIndex < deathSpr.Length)
         {
-            deathTimer -= .1f;
-            if (deathTimer < 0)
-            {
-                player.GetComponent<SpriteRenderer>().sprite = deathSpr[deathIndex++];
-                deathTimer = 5f;
-            }
+            player.GetComponent<SpriteRenderer>().sprite = deathSpr[deathIndex++];
+            yield return new WaitForSeconds(.09f);
         }
+
+        currentPlatform.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+        active = false;
+        yield return null;
     }
 }

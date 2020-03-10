@@ -18,6 +18,7 @@ public class PlayerAnimator : MonoBehaviour
     private SpriteRenderer sr;
     private float timer;
     private int i = 0;
+    private static bool dead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class PlayerAnimator : MonoBehaviour
         rgb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         timer = length / sprites.Length;
+        dead = false;
     }
 
     // Update is called once per frame
@@ -32,7 +34,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         // if player is moving, animate the sprite
         // loops through the animation every length seconds
-        if (Math.Abs(rgb.velocity.x) > 0 && Math.Abs(rgb.velocity.y) > 0)
+        if ((Math.Abs(rgb.velocity.x) > 0 && Math.Abs(rgb.velocity.y) > 0) && !dead) 
         {
             timer -= Time.deltaTime;
             if (timer < 0)
@@ -46,7 +48,7 @@ public class PlayerAnimator : MonoBehaviour
                 timer = length / sprites.Length;
                 i++;
             }
-        } else
+        } else if ((Math.Abs(rgb.velocity.x) == 0 && Math.Abs(rgb.velocity.y) == 0) && !dead)
         {
             sr.sprite = sprites[2];
             i = 0;
@@ -71,5 +73,10 @@ public class PlayerAnimator : MonoBehaviour
 
         YLUI.SetActive(true);
         yield return null;
+    }
+
+    public static void setDead (bool tf)
+    {
+        dead = tf;
     }
 }

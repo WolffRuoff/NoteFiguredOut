@@ -32,7 +32,6 @@ public class GameController : MonoBehaviour
     private float maxTime;
     private static bool won;
     private int deathIndex = 0;
-    private float deathTimer = 5f;    
     private bool blink;
     private bool deathOnce = true;
     
@@ -126,6 +125,8 @@ public class GameController : MonoBehaviour
                     {
                         noteMissed.text = "B";
                     }
+
+                    active = false;
 
                     if (deathOnce)
                     {

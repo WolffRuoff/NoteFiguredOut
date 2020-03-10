@@ -173,12 +173,12 @@ PrefabInstance:
     - target: {fileID: 5720690098463202086, guid: 71ee1d13bf3f849c0b442f89fd8df182,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.16
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 5720690098463202086, guid: 71ee1d13bf3f849c0b442f89fd8df182,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5720690098463202086, guid: 71ee1d13bf3f849c0b442f89fd8df182,
         type: 3}
@@ -596,7 +596,7 @@ PrefabInstance:
     - target: {fileID: 3589951097459093689, guid: e734283119e0c40459cddd902801af99,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 3589951097459093689, guid: e734283119e0c40459cddd902801af99,
         type: 3}
@@ -1239,6 +1239,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c14ec9763f34a15a3125fc3a2e86bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSpr:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   timerVal: 1.5
   firstJump: 2.85
   bridgeToMiddle: 3.329
@@ -1514,7 +1519,7 @@ PrefabInstance:
     - target: {fileID: 4896606093627854774, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.5
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 4896606093627854774, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}

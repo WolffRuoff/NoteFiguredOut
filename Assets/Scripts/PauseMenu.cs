@@ -7,6 +7,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 /// <summary>
@@ -18,8 +19,9 @@ public class PauseMenu : MonoBehaviour {
 
 	public string mainMenuScene = "StartMenu";
     private GameObject pauseMenuCanvas;
-
 	private bool running;
+
+	public GameObject rightSide;
 
     void Start()
     {
@@ -47,6 +49,9 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void UnPause(){
+		Animator an = rightSide.GetComponent<Animator>();
+		an.Play("RightExit");
+        //make this wait. See Lecture 10 Juice, example menu
 		pauseMenuCanvas.SetActive (false);
 		Time.timeScale = 1;
 		running = true;
@@ -57,6 +62,12 @@ public class PauseMenu : MonoBehaviour {
 		GameManager.gameState = GameManager.GameState.StartMenu;
 		GameManager.LoadScene (mainMenuScene);
 	}
+
+    public void Restart()
+	{
+		Time.timeScale = 1;
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
     public void OnClick()
     {

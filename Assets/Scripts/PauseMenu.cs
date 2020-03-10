@@ -58,5 +58,15 @@ public class PauseMenu : MonoBehaviour {
 		GameManager.LoadScene (mainMenuScene);
 	}
 
-
+    public void OnClick()
+    {
+		if (running)
+		{
+			Pause();
+		}
+		else if (running == false)
+		{
+			UnPause();
+		}
+	}
 }

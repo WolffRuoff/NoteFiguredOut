@@ -25,8 +25,9 @@ public class GameController : MonoBehaviour
     private static char note = '\0';
     private static char selection = '\0';
     private static bool active = false;
-    private static int score = 0;
-    private float timer;
+    private static float score = 0f;
+    private static float timeLeft;
+    private static float timer;
     private float maxTime;
     private bool blink = false;
     private Rigidbody2D rgb;
@@ -123,11 +124,11 @@ public class GameController : MonoBehaviour
 
         if (score == 1)
         {
-            points.text = "You Scored " + score + " Point!";
+            points.text = "You Scored " + Math.Round(score, 2) + " Point!";
         }
         else
         {
-            points.text = "You Scored " + score + " Points!";
+            points.text = "You Scored " + Math.Round(score, 2) + " Points!";
         }
 
         noteMissed.text = "" + note;
@@ -152,7 +153,8 @@ public class GameController : MonoBehaviour
             es.SetSelectedGameObject(null);
 
             // update score
-            scoreT.text = "Score: " + ++score;
+            score += timeLeft;
+            scoreT.text = "Score: " + Math.Round(score, 2);
         }
         
         // launch player -- not exact but doesn't have to be
@@ -175,6 +177,10 @@ public class GameController : MonoBehaviour
     public static void RecieveInput(char n)
     {
         // update the user input selection
+        if (selection != n)
+        {
+            timeLeft = timer;
+        }
         selection = n;
     }
 
@@ -201,7 +207,7 @@ public class GameController : MonoBehaviour
         won = tf;
     }
 
-    public static int getScore ()
+    public static float getScore ()
     {
         return score;
     }

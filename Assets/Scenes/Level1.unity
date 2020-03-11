@@ -1527,7 +1527,7 @@ PrefabInstance:
     - target: {fileID: 2987590500468679565, guid: 3b1fe1560d9cb49dbabd7744f31d6297,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -50
+      value: -76
       objectReference: {fileID: 0}
     - target: {fileID: 2987590500468679565, guid: 3b1fe1560d9cb49dbabd7744f31d6297,
         type: 3}
@@ -1637,7 +1637,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6cc07093175f13f4fa54a314208aaf71, type: 3}
   - {fileID: 21300000, guid: 182269c9f1aa37e42a871b004bbff509, type: 3}
   - {fileID: 21300000, guid: 5b6e20de5d69dd246872cb598260e42b, type: 3}
-  timerVal: 2
+  timerVal: 1.5
   firstJump: 2.85
   bridgeToMiddle: 3.329
   middleToMiddle: 2.755

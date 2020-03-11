@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Platform : MonoBehaviour
 {
@@ -69,7 +70,7 @@ public class Platform : MonoBehaviour
     {
         // assign a random note for infinite mode
         char note;
-        int randNote = Random.Range(1, 7);
+        int randNote = UnityEngine.Random.Range(1, 7);
 
         if (randNote == 1)
         {
@@ -126,7 +127,8 @@ public class Platform : MonoBehaviour
         InputController.setActive(false);
         CameraController.setActive(false);
         Notes.Instance.setActive(false);
-        int score_ = GameController.getScore();
+        inGameUI.transform.Find("PauseMenu").GetComponent<PauseMenu>().enabled = false;
+        float score_ = (float) Math.Round(GameController.getScore(), 2);
         if (score_ == 1)
         {
             score.text = "You Scored " + score_ + " Point!";

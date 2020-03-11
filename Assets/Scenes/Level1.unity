@@ -1637,11 +1637,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6cc07093175f13f4fa54a314208aaf71, type: 3}
   - {fileID: 21300000, guid: 182269c9f1aa37e42a871b004bbff509, type: 3}
   - {fileID: 21300000, guid: 5b6e20de5d69dd246872cb598260e42b, type: 3}
-  timerVal: 1.5
+  timerVal: 2
   firstJump: 2.85
   bridgeToMiddle: 3.329
   middleToMiddle: 2.755
-  t: {fileID: 908930826}
+  scoreT: {fileID: 908930826}
   points: {fileID: 982532360}
   noteMissed: {fileID: 580562445}
   es: {fileID: 1611633226}
@@ -1771,6 +1771,26 @@ PrefabInstance:
       propertyPath: points
       value: 
       objectReference: {fileID: 1807934188}
+    - target: {fileID: 360878693023213929, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: inGameUI
+      value: 
+      objectReference: {fileID: 1991791752}
+    - target: {fileID: 360878693023213929, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 764764397}
+    - target: {fileID: 360878693023213929, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: youWinUI
+      value: 
+      objectReference: {fileID: 1938499857}
+    - target: {fileID: 360878693023213929, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1807934188}
     - target: {fileID: 630641767432445277, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: IGUI
@@ -1791,6 +1811,26 @@ PrefabInstance:
       propertyPath: points
       value: 
       objectReference: {fileID: 1807934188}
+    - target: {fileID: 630641767432445277, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 764764397}
+    - target: {fileID: 630641767432445277, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1807934188}
+    - target: {fileID: 630641767432445277, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: inGameUI
+      value: 
+      objectReference: {fileID: 1991791752}
+    - target: {fileID: 630641767432445277, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: youWinUI
+      value: 
+      objectReference: {fileID: 1938499857}
     - target: {fileID: 921714005859521737, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1816,6 +1856,26 @@ PrefabInstance:
       propertyPath: points
       value: 
       objectReference: {fileID: 1807934188}
+    - target: {fileID: 924438007349917932, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: youWinUI
+      value: 
+      objectReference: {fileID: 1938499857}
+    - target: {fileID: 924438007349917932, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 764764397}
+    - target: {fileID: 924438007349917932, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1807934188}
+    - target: {fileID: 924438007349917932, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: inGameUI
+      value: 
+      objectReference: {fileID: 1991791752}
     - target: {fileID: 1297316056508628470, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: IGUI
@@ -1836,6 +1896,26 @@ PrefabInstance:
       propertyPath: points
       value: 
       objectReference: {fileID: 1807934188}
+    - target: {fileID: 1297316056508628470, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 764764397}
+    - target: {fileID: 1297316056508628470, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1807934188}
+    - target: {fileID: 1297316056508628470, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: youWinUI
+      value: 
+      objectReference: {fileID: 1938499857}
+    - target: {fileID: 1297316056508628470, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: inGameUI
+      value: 
+      objectReference: {fileID: 1991791752}
     - target: {fileID: 1711395035130436748, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: IGUI
@@ -1854,6 +1934,26 @@ PrefabInstance:
     - target: {fileID: 1711395035130436748, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: points
+      value: 
+      objectReference: {fileID: 1807934188}
+    - target: {fileID: 1711395035130436748, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: inGameUI
+      value: 
+      objectReference: {fileID: 1991791752}
+    - target: {fileID: 1711395035130436748, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: youWinUI
+      value: 
+      objectReference: {fileID: 1938499857}
+    - target: {fileID: 1711395035130436748, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 764764397}
+    - target: {fileID: 1711395035130436748, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: score
       value: 
       objectReference: {fileID: 1807934188}
     - target: {fileID: 3464269505442790206, guid: f695c051f865e4af2b00b0c7b0c3173b,
@@ -1876,6 +1976,26 @@ PrefabInstance:
       propertyPath: points
       value: 
       objectReference: {fileID: 1807934188}
+    - target: {fileID: 3464269505442790206, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 764764397}
+    - target: {fileID: 3464269505442790206, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: youWinUI
+      value: 
+      objectReference: {fileID: 1938499857}
+    - target: {fileID: 3464269505442790206, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1807934188}
+    - target: {fileID: 3464269505442790206, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: inGameUI
+      value: 
+      objectReference: {fileID: 1991791752}
     - target: {fileID: 3627134259838613637, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: cg
@@ -1896,6 +2016,26 @@ PrefabInstance:
       propertyPath: points
       value: 
       objectReference: {fileID: 1807934188}
+    - target: {fileID: 3627134259838613637, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 764764397}
+    - target: {fileID: 3627134259838613637, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1807934188}
+    - target: {fileID: 3627134259838613637, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: youWinUI
+      value: 
+      objectReference: {fileID: 1938499857}
+    - target: {fileID: 3627134259838613637, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: inGameUI
+      value: 
+      objectReference: {fileID: 1991791752}
     - target: {fileID: 4613780037861354851, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: IGUI
@@ -1916,6 +2056,26 @@ PrefabInstance:
       propertyPath: points
       value: 
       objectReference: {fileID: 1807934188}
+    - target: {fileID: 4613780037861354851, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: inGameUI
+      value: 
+      objectReference: {fileID: 1991791752}
+    - target: {fileID: 4613780037861354851, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: youWinUI
+      value: 
+      objectReference: {fileID: 1938499857}
+    - target: {fileID: 4613780037861354851, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1807934188}
+    - target: {fileID: 4613780037861354851, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 764764397}
     - target: {fileID: 4896606093627854761, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: m_Name
@@ -1996,6 +2156,26 @@ PrefabInstance:
       propertyPath: points
       value: 
       objectReference: {fileID: 1807934188}
+    - target: {fileID: 6757314345242376438, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: inGameUI
+      value: 
+      objectReference: {fileID: 1991791752}
+    - target: {fileID: 6757314345242376438, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: youWinUI
+      value: 
+      objectReference: {fileID: 1938499857}
+    - target: {fileID: 6757314345242376438, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 764764397}
+    - target: {fileID: 6757314345242376438, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1807934188}
     - target: {fileID: 8271676732412673803, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: IGUI
@@ -2016,6 +2196,26 @@ PrefabInstance:
       propertyPath: points
       value: 
       objectReference: {fileID: 1807934188}
+    - target: {fileID: 8271676732412673803, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 764764397}
+    - target: {fileID: 8271676732412673803, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1807934188}
+    - target: {fileID: 8271676732412673803, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: youWinUI
+      value: 
+      objectReference: {fileID: 1938499857}
+    - target: {fileID: 8271676732412673803, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: inGameUI
+      value: 
+      objectReference: {fileID: 1991791752}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f695c051f865e4af2b00b0c7b0c3173b, type: 3}
 --- !u!1001 &1807934187
@@ -2353,6 +2553,26 @@ PrefabInstance:
     - target: {fileID: 4383708425020635087, guid: ae7be9e86d4234569b90ec5b453b4f43,
         type: 3}
       propertyPath: points
+      value: 
+      objectReference: {fileID: 1807934188}
+    - target: {fileID: 4383708425020635087, guid: ae7be9e86d4234569b90ec5b453b4f43,
+        type: 3}
+      propertyPath: inGameUI
+      value: 
+      objectReference: {fileID: 1991791752}
+    - target: {fileID: 4383708425020635087, guid: ae7be9e86d4234569b90ec5b453b4f43,
+        type: 3}
+      propertyPath: youWinUI
+      value: 
+      objectReference: {fileID: 1938499857}
+    - target: {fileID: 4383708425020635087, guid: ae7be9e86d4234569b90ec5b453b4f43,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 764764397}
+    - target: {fileID: 4383708425020635087, guid: ae7be9e86d4234569b90ec5b453b4f43,
+        type: 3}
+      propertyPath: score
       value: 
       objectReference: {fileID: 1807934188}
     - target: {fileID: 8661269479905744033, guid: ae7be9e86d4234569b90ec5b453b4f43,

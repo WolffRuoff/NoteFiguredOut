@@ -61,6 +61,8 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void GoToMainMenu(){
+		pauseMenuCanvas.SetActive(false);
+		Time.timeScale = 1;
 		GameManager.gameState = GameManager.GameState.StartMenu;
 		GameManager.LoadScene (mainMenuScene);
 	}

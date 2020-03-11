@@ -75,6 +75,7 @@ public class Levels : MonoBehaviour
             level1.Enqueue(new KeyValuePair<char, int>('c', 4));
             _instance.songs.Add(1, level1);
 
+            //Swan Lake
             Queue<KeyValuePair<char, int>> level2 = new Queue<KeyValuePair<char, int>>();
             level2.Enqueue(new KeyValuePair<char, int>('e', 5));
             level2.Enqueue(new KeyValuePair<char, int>('a', 4));
@@ -109,6 +110,148 @@ public class Levels : MonoBehaviour
             level2.Enqueue(new KeyValuePair<char, int>('a', 4));
             _instance.songs.Add(2, level2);
 
+            Queue<KeyValuePair<char, int>> level3 = new Queue<KeyValuePair<char, int>>();
+            //Chorus
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+
+            level3.Enqueue(new KeyValuePair<char, int>('c', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+
+            level3.Enqueue(new KeyValuePair<char, int>('c', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+
+            //Verse
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('a', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('a', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('a', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('b', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('a', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('a', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('a', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('a', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('a', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('b', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 5));
+            //A# 4
+            //G# 4
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            //D# 4
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+
+            //Chorus
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+
+            level3.Enqueue(new KeyValuePair<char, int>('c', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 3));
+
+            level3.Enqueue(new KeyValuePair<char, int>('c', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level3.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level3.Enqueue(new KeyValuePair<char, int>('c', 5));
+            _instance.songs.Add(3, level3);
             first = false;
 
         }

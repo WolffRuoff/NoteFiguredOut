@@ -38,7 +38,7 @@ public class Notes : MonoBehaviour
     void Start()
     {
         sound = GetComponent<AudioSource>();
-        setActive(true);
+        Instance.setActive(true);
 
     }
 

@@ -8,156 +8,151 @@ public class Platform : MonoBehaviour
 {
     public bool random = false;
     public int level = 0;
-    public GameObject IGUI;
-    public GameObject YWUI;
-    public CanvasGroup cg;
-    public Text points;
+    public GameObject inGameUI;
+    public GameObject youWinUI;
+    public CanvasGroup fade;
+    public Text score;
 
     private KeyValuePair<char, int> pair;
     private static bool active = true;
-    private CanvasGroup igcg;
-    private int score;
 
     void Start()
     {
-        Levels.setFirst();
-        igcg = IGUI.GetComponent<CanvasGroup>();
         active = true;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public static void setActive(bool tf)
     {
+        active = tf;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // put player in the correct place
+        collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        GameController.center();
+        GameController.RecievePlatform(transform);
+        if (!active)
+        {
+            GameController.setActive(true);
+        }
+        
+
         if (collision.gameObject.CompareTag("player"))
         {
-            // stop player from sliding and recenter so that it never goes off the edge
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            GameController.center();
+            // assign a note to this platform
+            if (random)
+            {
+                randomNote();
+            } else
+            {
+                if (levelNote())
+                {
+                    won(collision.gameObject);
+                }
+            }
 
+            // only want these actions if the game is not won
             if (active)
             {
-                // send info to GameController
-                GameController.RecievePlatform(transform);
-
-                // assign platform a note
-                if (random)
-                {
-                    char note;
-                    int randNote = Random.Range(1, 7);
-
-                    if (randNote == 1)
-                    {
-                        note = 'c';
-                    }
-                    else if (randNote == 2)
-                    {
-                        note = 'd';
-                    }
-                    else if (randNote == 3)
-                    {
-                        note = 'e';
-                    }
-                    else if (randNote == 4)
-                    {
-                        note = 'f';
-                    }
-                    else if (randNote == 5)
-                    {
-                        note = 'g';
-                    }
-                    else if (randNote == 6)
-                    {
-                        note = 'a';
-                    }
-                    else
-                    {
-                        note = 'b';
-                    }
-
-                    pair = new KeyValuePair<char, int>(note, 4);
-                }
-                else
-                {
-                    Levels curr = Levels.getInstance();
-                    if (!curr.isEmpty(level))
-                    {
-                        pair = curr.getNextNote(level);
-                    }
-                    else
-                    {
-                        // player wins
-                        setActive(false);
-                        GameController.setActive(false);
-                        GameController.setWon(true);
-                        Notes.Instance.setActive(false);
-                        InputController.setActive(false);
-                        CameraController.setActive(false);
-                        score = GameController.getScore();
-                        if (score == 1)
-                        {
-                            points.text = "You Scored " + score + " Point!";
-                        }
-                        else
-                        {
-                            points.text = "You Scored " + score + " Points!";
-                        }
-                        StartCoroutine(win());
-                    }
-
-                }
-
-                // send selection to GameController
-                if (pair.Key == 'c' && !GameController.won)
-                {
-                    GameController.RecieveNote(0);
-                }
-                else if (pair.Key == 'd' && !GameController.won)
-                {
-                    GameController.RecieveNote(1);
-                }
-                else if (pair.Key == 'e' && !GameController.won)
-                {
-                    GameController.RecieveNote(2);
-                }
-                else if (pair.Key == 'f' && !GameController.won)
-                {
-                    GameController.RecieveNote(3);
-                }
-                else if (pair.Key == 'g' && !GameController.won)
-                {
-                    GameController.RecieveNote(4);
-                }
-                else if (pair.Key == 'a' && !GameController.won)
-                {
-                    GameController.RecieveNote(5);
-                }
-                else if (pair.Key == 'b' && !GameController.won)
-                {
-                    GameController.RecieveNote(6);
-                }
+                // send note to gamecontroller
+                GameController.RecieveNote(pair.Key);
 
                 // play the note
                 Notes.Instance.Note(pair.Key, pair.Value);
                 Debug.Log(pair.Key);
             }
-        }    
+        }
+    }
+    
+    private void randomNote()
+    {
+        // assign a random note for infinite mode
+        char note;
+        int randNote = Random.Range(1, 7);
+
+        if (randNote == 1)
+        {
+            note = 'c';
+        }
+        else if (randNote == 2)
+        {
+            note = 'd';
+        }
+        else if (randNote == 3)
+        {
+            note = 'e';
+        }
+        else if (randNote == 4)
+        {
+            note = 'f';
+        }
+        else if (randNote == 5)
+        {
+            note = 'g';
+        }
+        else if (randNote == 6)
+        {
+            note = 'a';
+        }
+        else
+        {
+            note = 'b';
+        }
+
+        pair = new KeyValuePair<char, int>(note, 4);
+    }
+
+    private bool levelNote()
+    {
+        // receive the note from Levels
+        Levels curr = Levels.getInstance();
+        if (!curr.isEmpty(level))
+        {
+            pair = curr.getNextNote(level);
+            return false;
+        }
+
+        return true;
+    }
+
+    private void won(GameObject player)
+    {
+        // set states across other scripts b/c the level is over
+        active = false;
+        player.tag = "winner";
+        Levels.setFirst();
+        GameController.setWon(true);
+        InputController.setActive(false);
+        CameraController.setActive(false);
+        Notes.Instance.setActive(false);
+        int score_ = GameController.getScore();
+        if (score_ == 1)
+        {
+            score.text = "You Scored " + score_ + " Point!";
+        }
+        else
+        {
+            score.text = "You Scored " + score_ + " Points!";
+        }
+
+        StartCoroutine(win());
     }
 
     IEnumerator win()
     {
-        while (cg.alpha < 1)
+        // fade to gray
+        while (fade.alpha < 1)
         {
-            cg.alpha += Time.deltaTime / 7;
-            igcg.alpha -= Time.deltaTime / 7;
+            fade.alpha += Time.deltaTime / 7;
+            inGameUI.GetComponent<CanvasGroup>().alpha -= Time.deltaTime / 7;
             yield return null;
         }
-        IGUI.SetActive(false);
-        YWUI.SetActive(true);
-        yield return null;
-    }
 
-    public static void setActive (bool tf)
-    {
-        active = tf;
+        // switch the UI
+        inGameUI.SetActive(false);
+        youWinUI.SetActive(true);
+        yield return null;
     }
 }
 

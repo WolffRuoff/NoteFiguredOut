@@ -145,7 +145,7 @@ public class Tutorial : MonoBehaviour
 
 
                 // send selection to GameController
-                if (pair.Key == 'c')
+                /*if (pair.Key == 'c')
                 {
                     GameController.RecieveNote(0);
                 }
@@ -172,7 +172,7 @@ public class Tutorial : MonoBehaviour
                 else if (pair.Key == 'b')
                 {
                     GameController.RecieveNote(6);
-                }
+                }*/
 
                 // play the note
                 Notes.Instance.Note(pair.Key, pair.Value);

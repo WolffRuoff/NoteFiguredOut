@@ -74,7 +74,34 @@ public class InputController : MonoBehaviour
     // function that is assigned to clicking the buttons on the UI during gameplay
     public void Send (int note)
     {
-        GameController.RecieveInput(note);
+        if (note == 0)
+        {
+            GameController.RecieveInput('c');
+        }
+        else if (note == 1)
+        {
+            GameController.RecieveInput('d');
+        }
+        else if (note == 2)
+        {
+            GameController.RecieveInput('e');
+        }
+        else if (note == 3)
+        {
+            GameController.RecieveInput('f');
+        }
+        else if (note == 4)
+        {
+            GameController.RecieveInput('g');
+        }
+        else if (note == 5)
+        {
+            GameController.RecieveInput('a');
+        }
+        else if (note == 6)
+        {
+            GameController.RecieveInput('b');
+        }
     }
 
     public static void setActive(bool tf)

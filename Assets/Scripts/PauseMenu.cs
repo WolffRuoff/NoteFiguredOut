@@ -52,7 +52,9 @@ public class PauseMenu : MonoBehaviour {
 	public void UnPause(){
 		Animator an = rightSide.GetComponent<Animator>();
 		an.Play("RightExit");
-        //make this wait. See Lecture 10 Juice, example menu
+		AnimatorStateInfo ans = an.GetCurrentAnimatorStateInfo(0);
+		while (ans.IsName("Base.RightExit") && //WTF is the Right Name??
+			ans.normalizedTime < 1.0f) { Debug.Log("playing"); }
 		pauseMenuCanvas.SetActive (false);
 		Time.timeScale = 1;
 		Notes.Instance.setActive(true);

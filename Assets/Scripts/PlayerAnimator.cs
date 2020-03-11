@@ -52,7 +52,7 @@ public class PlayerAnimator : MonoBehaviour
             i = 0;
         }
 
-        if (transform.position.y < -3)
+        if (transform.position.y < -3 && dead)
         {
 
             Notes.Instance.setActive(false);

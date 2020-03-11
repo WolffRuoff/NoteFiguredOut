@@ -44,7 +44,7 @@ public class PauseMenu : MonoBehaviour {
 	public void Pause(){
 		pauseMenuCanvas.SetActive (true);
 		Time.timeScale = 0;
-		Notes.Instance.setActive(false);
+		Notes.Instance.pause(true);
 		running = false;
 		GameManager.Pause();
 	}
@@ -58,6 +58,7 @@ public class PauseMenu : MonoBehaviour {
 		pauseMenuCanvas.SetActive (false);
 		Time.timeScale = 1;
 		Notes.Instance.setActive(true);
+		Notes.Instance.pause(false);
 		running = true;
 		GameManager.Unpause();
 	}
@@ -66,14 +67,16 @@ public class PauseMenu : MonoBehaviour {
 		pauseMenuCanvas.SetActive(false);
 		Time.timeScale = 1;
 		GameManager.gameState = GameManager.GameState.StartMenu;
+		Levels.setFirst();
 		GameManager.LoadScene (mainMenuScene);
 	}
 
     public void Restart()
 	{
 		Time.timeScale = 1;
+		Levels.setFirst();
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+	}
 
     public void OnClick()
     {

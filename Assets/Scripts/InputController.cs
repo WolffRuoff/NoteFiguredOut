@@ -14,6 +14,7 @@ public class InputController : MonoBehaviour
     public Button b;
 
     private static bool active = true;
+    private static bool activeChange = false;
 
     void Start()
     {
@@ -59,15 +60,16 @@ public class InputController : MonoBehaviour
             b.Select();
         }
 
-        if (!active)
+        if (activeChange)
         {
-            c.enabled = false;
-            d.enabled = false;
-            e.enabled = false;
-            f.enabled = false;
-            g.enabled = false;
-            a.enabled = false;
-            b.enabled = false;
+            activeChange = false;
+            c.enabled = active;
+            d.enabled = active;
+            e.enabled = active;
+            f.enabled = active;
+            g.enabled = active;
+            a.enabled = active;
+            b.enabled = active;
         }
     }
 
@@ -107,5 +109,6 @@ public class InputController : MonoBehaviour
     public static void setActive(bool tf)
     {
         active = tf;
+        activeChange = true;
     }
 }

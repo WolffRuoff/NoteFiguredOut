@@ -19,7 +19,7 @@ public class Notes : MonoBehaviour
     {
         get
         {
-            if(_instance == null)
+            if (_instance == null)
             {
                 GameObject note = new GameObject("Notes");
                 note.AddComponent<Notes>();
@@ -52,36 +52,36 @@ public class Notes : MonoBehaviour
         if (octive == 6) { sound.clip = c6; }
         if (octive == 7) { sound.clip = c7; }
 
-        if(note == 'c')
+        if (note == 'c')
         {
             sound.pitch = Mathf.Pow(1.05946f, 0f);
         }
-        else if(note == 'd')
+        else if (note == 'd')
         {
             sound.pitch = Mathf.Pow(1.05946f, 2f);
         }
 
-        else if(note == 'e')
+        else if (note == 'e')
         {
             sound.pitch = Mathf.Pow(1.05946f, 4f);
         }
 
-        else if(note == 'f')
+        else if (note == 'f')
         {
             sound.pitch = Mathf.Pow(1.05946f, 5f);
         }
 
-        else if(note == 'g')
+        else if (note == 'g')
         {
             sound.pitch = Mathf.Pow(1.05946f, 7f);
         }
 
-        else if(note == 'a')
+        else if (note == 'a')
         {
             sound.pitch = Mathf.Pow(1.05946f, 9f);
         }
 
-        else if(note == 'b')
+        else if (note == 'b')
         {
             sound.pitch = Mathf.Pow(1.05946f, 11f);
         }
@@ -91,5 +91,17 @@ public class Notes : MonoBehaviour
     public void setActive(bool tf)
     {
         sound.enabled = tf;
+    }
+
+    public void pause(bool b)
+    {
+        if (b)
+        {
+            sound.Pause();
+        }
+        else
+        {
+            sound.Play();
+        }
     }
 }

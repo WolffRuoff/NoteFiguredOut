@@ -67,12 +67,24 @@ public class GameController : MonoBehaviour
                 }
             }
         }
+
+        if (won)
+        {
+            if (updateTimer())
+            {
+                next();
+            }
+            
+        }
     }
 
     private bool updateTimer ()
     {
         timer -= Time.deltaTime;
-        timeBar.fillAmount = timer / maxTime;
+        if (!won)
+        {
+            timeBar.fillAmount = timer / maxTime;
+        }
 
         if (timer > 0)
         {
@@ -125,15 +137,16 @@ public class GameController : MonoBehaviour
 
     private void next ()
     {
+        active = false;
+        // reset timer
+        timer = timerVal;
+
         if (!won)
         {
             // set up for next platform
-            active = false;
+            InputController.setActive(false);
             note = '\0';
             selection = '\0';
-
-            // reset timer
-            timer = timerVal;
 
             // reset button color
             es.SetSelectedGameObject(null);
@@ -170,6 +183,7 @@ public class GameController : MonoBehaviour
         // update the current note that is being played and start the timer
         note = n;
         active = true;
+        InputController.setActive(true);
     }
 
     public static void RecievePlatform(Transform t)

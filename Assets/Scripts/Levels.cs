@@ -38,7 +38,7 @@ public class Levels : MonoBehaviour
             level1.Enqueue(new KeyValuePair<char, int>('a', 4));
             level1.Enqueue(new KeyValuePair<char, int>('a', 4));
             level1.Enqueue(new KeyValuePair<char, int>('g', 4));
-            level1.Enqueue(new KeyValuePair<char, int>('f', 4));
+            /*level1.Enqueue(new KeyValuePair<char, int>('f', 4));
             level1.Enqueue(new KeyValuePair<char, int>('f', 4));
             level1.Enqueue(new KeyValuePair<char, int>('e', 4));
             level1.Enqueue(new KeyValuePair<char, int>('e', 4));
@@ -72,7 +72,7 @@ public class Levels : MonoBehaviour
             level1.Enqueue(new KeyValuePair<char, int>('e', 4));
             level1.Enqueue(new KeyValuePair<char, int>('d', 4));
             level1.Enqueue(new KeyValuePair<char, int>('d', 4));
-            level1.Enqueue(new KeyValuePair<char, int>('c', 4));
+            level1.Enqueue(new KeyValuePair<char, int>('c', 4));*/
             _instance.songs.Add(1, level1);
 
             //Swan Lake

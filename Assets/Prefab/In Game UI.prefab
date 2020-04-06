@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuScene: StartMenu
+  rightSide: {fileID: 0}
 --- !u!1 &918475376144118952
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,7 +80,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2987590500145883707}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -370,9 +371,9 @@ RectTransform:
   - {fileID: 2987590499776719318}
   - {fileID: 2987590501462400395}
   - {fileID: 2987590500468679565}
-  - {fileID: 2987590501276307734}
   - {fileID: 187600452544320852}
   - {fileID: 1587446473909442171}
+  - {fileID: 2987590501276307734}
   - {fileID: 5047295159513827527}
   - {fileID: 793974864337959062}
   m_Father: {fileID: 0}
@@ -1192,7 +1193,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2987590500145883707}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2184,7 +2185,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2987590500145883707}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

@@ -1730,7 +1730,7 @@ PrefabInstance:
     - target: {fileID: 8225068496888253945, guid: e734283119e0c40459cddd902801af99,
         type: 3}
       propertyPath: level
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8225068496888253945, guid: e734283119e0c40459cddd902801af99,
         type: 3}
@@ -1885,6 +1885,11 @@ PrefabInstance:
       propertyPath: score
       value: 
       objectReference: {fileID: 1807934188}
+    - target: {fileID: 360878693023213929, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: level
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 630641767432445277, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: IGUI
@@ -1925,6 +1930,11 @@ PrefabInstance:
       propertyPath: youWinUI
       value: 
       objectReference: {fileID: 1938499857}
+    - target: {fileID: 630641767432445277, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: level
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 921714005859521737, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1970,6 +1980,11 @@ PrefabInstance:
       propertyPath: inGameUI
       value: 
       objectReference: {fileID: 1991791752}
+    - target: {fileID: 924438007349917932, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: level
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1297316056508628470, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: IGUI
@@ -2010,6 +2025,11 @@ PrefabInstance:
       propertyPath: inGameUI
       value: 
       objectReference: {fileID: 1991791752}
+    - target: {fileID: 1297316056508628470, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: level
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1711395035130436748, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: IGUI
@@ -2050,6 +2070,11 @@ PrefabInstance:
       propertyPath: score
       value: 
       objectReference: {fileID: 1807934188}
+    - target: {fileID: 1711395035130436748, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: level
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3464269505442790206, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: cg
@@ -2090,6 +2115,11 @@ PrefabInstance:
       propertyPath: inGameUI
       value: 
       objectReference: {fileID: 1991791752}
+    - target: {fileID: 3464269505442790206, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: level
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3627134259838613637, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: cg
@@ -2130,6 +2160,11 @@ PrefabInstance:
       propertyPath: inGameUI
       value: 
       objectReference: {fileID: 1991791752}
+    - target: {fileID: 3627134259838613637, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: level
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4613780037861354851, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: IGUI
@@ -2170,6 +2205,11 @@ PrefabInstance:
       propertyPath: fade
       value: 
       objectReference: {fileID: 764764397}
+    - target: {fileID: 4613780037861354851, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: level
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4896606093627854761, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: m_Name
@@ -2270,6 +2310,11 @@ PrefabInstance:
       propertyPath: score
       value: 
       objectReference: {fileID: 1807934188}
+    - target: {fileID: 6757314345242376438, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: level
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8271676732412673803, guid: f695c051f865e4af2b00b0c7b0c3173b,
         type: 3}
       propertyPath: IGUI
@@ -2310,6 +2355,11 @@ PrefabInstance:
       propertyPath: inGameUI
       value: 
       objectReference: {fileID: 1991791752}
+    - target: {fileID: 8271676732412673803, guid: f695c051f865e4af2b00b0c7b0c3173b,
+        type: 3}
+      propertyPath: level
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f695c051f865e4af2b00b0c7b0c3173b, type: 3}
 --- !u!1001 &1807934187

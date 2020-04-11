@@ -2968,7 +2968,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You're now ready to play pitch penguin! hit the arrow on the right to begin!
+  m_Text: You're now ready to play pitch penguin! hit the arrow on the right to start
+    your pitch-learning journey!
 --- !u!222 &1496921224
 CanvasRenderer:
   m_ObjectHideFlags: 0

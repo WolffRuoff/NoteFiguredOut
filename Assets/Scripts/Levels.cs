@@ -110,6 +110,7 @@ public class Levels : MonoBehaviour
             level2.Enqueue(new KeyValuePair<char, int>('a', 4));
             _instance.songs.Add(2, level2);
 
+            //Star Wars
             Queue<KeyValuePair<char, int>> level3 = new Queue<KeyValuePair<char, int>>();
             //Chorus
             level3.Enqueue(new KeyValuePair<char, int>('g', 3));
@@ -252,6 +253,64 @@ public class Levels : MonoBehaviour
             level3.Enqueue(new KeyValuePair<char, int>('c', 5));
             level3.Enqueue(new KeyValuePair<char, int>('c', 5));
             _instance.songs.Add(3, level3);
+
+            //Silent Night
+            Queue<KeyValuePair<char, int>> level4 = new Queue<KeyValuePair<char, int>>();
+            level4.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('a', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('a', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('e', 4));
+
+            level4.Enqueue(new KeyValuePair<char, int>('d', 5));
+            level4.Enqueue(new KeyValuePair<char, int>('d', 5));
+            level4.Enqueue(new KeyValuePair<char, int>('b', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level4.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level4.Enqueue(new KeyValuePair<char, int>('g', 4));
+
+            level4.Enqueue(new KeyValuePair<char, int>('a', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('a', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level4.Enqueue(new KeyValuePair<char, int>('b', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('a', 4));
+
+            level4.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('a', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('e', 4));
+
+            level4.Enqueue(new KeyValuePair<char, int>('a', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('a', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level4.Enqueue(new KeyValuePair<char, int>('b', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('a', 4));
+
+            level4.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('a', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('e', 4));
+
+            level4.Enqueue(new KeyValuePair<char, int>('d', 5));
+            level4.Enqueue(new KeyValuePair<char, int>('d', 5));
+            level4.Enqueue(new KeyValuePair<char, int>('f', 5));
+            level4.Enqueue(new KeyValuePair<char, int>('d', 5));
+            level4.Enqueue(new KeyValuePair<char, int>('b', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level4.Enqueue(new KeyValuePair<char, int>('e', 5));
+
+            level4.Enqueue(new KeyValuePair<char, int>('c', 5));
+            level4.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('e', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('g', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('f', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('d', 4));
+            level4.Enqueue(new KeyValuePair<char, int>('c', 4));
+            _instance.songs.Add(4, level4);
             first = false;
 
         }

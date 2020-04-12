@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
 {
     public static GameObject player;
     public Sprite[] deathSpr = new Sprite[4];
-    public float timerVal = 2f;
+    public float timerVal = 3f;
     public float firstJump = 2.85f;
     public float bridgeToMiddle = 3.329f;
     public float middleToMiddle = 2.755f;
